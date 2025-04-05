@@ -1,0 +1,653 @@
+
+%CONFIGURACIÓN DEL DOCUMENTO Y HOJA
+
+\documentclass[11pt,letterpaper]{article}
+\setlength{\parindent}{0em}                  %DISTANCIA SANGRÍA
+\setlength{\parskip}{0.5em}                  %DISTANCIA ENTRE PÁRRAFOS
+\textwidth 6.5in
+\textheight 9.in
+\oddsidemargin 0in
+\headheight 0in
+
+%PAQUETES DEL TEMPLATE
+
+\usepackage{fancybox}
+\usepackage[utf8]{inputenc}
+\usepackage{epsfig,graphicx}
+\usepackage{multicol,pst-plot}
+\usepackage{pstricks}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{physics} %Para símbolos físicos más bonitos
+\usepackage{amssymb}
+\usepackage{eucal}
+\usepackage[left=1in,right=1in,top=1in,bottom=1in]{geometry} %Forma estándar
+%\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry} %Original de la plantilla
+\usepackage{txfonts}
+\usepackage[spanish]{babel}
+\usepackage[colorlinks]{hyperref}
+\usepackage{cancel}
+\usepackage{caption}
+\usepackage{float}
+\usepackage{upgreek}
+\usepackage{gensymb}
+\usepackage{subfigure}
+\usepackage{siunitx}
+\usepackage{color}
+\usepackage{tikz}
+\usepackage{listings}
+\usepackage{minted}
+\usepackage{mdframed}
+\usepackage{natbib}
+\bibliographystyle{mnras}
+\setcitestyle{aysep{","}}
+\usepackage{multicol}
+\renewcommand{\bibpreamble}{\begin{multicols}{2}}
+\renewcommand{\bibpostamble}{\end{multicols}}
+\setlength{\bibsep}{3pt}
+\newcommand*\vtick{\textsc{\char13}}
+%DEFINICIÓN DE COLORES EXTRAS
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.95}
+\hypersetup{colorlinks=true,linkcolor=codegreen,citecolor=blue,filecolor=blue,urlcolor=magenta,}
+
+%CONFIGURACIÓN DE LSTLISTINGS PARA CÓDIGOS
+
+\lstset{ %
+language=python,                % choose the language of the code
+basicstyle=\footnotesize,       % the size of the fonts that are used for the code
+numbers=left,                   % where to put the line-numbers
+numberstyle=\footnotesize,      % the size of the fonts that are used for the line-numbers
+stepnumber=1,                   % the step between two line-numbers. If it is 1 each line will be numbered
+numbersep=5pt,                  % how far the line-numbers are from the code
+backgroundcolor=\color{white},  % choose the background color. You must add \usepackage{color}
+showspaces=false,               % show spaces adding particular underscores
+showstringspaces=false,         % underline spaces within strings
+showtabs=false,                 % show tabs within strings adding particular underscores
+frame=single,                   % adds a frame around the code
+tabsize=2,                      % sets default tabsize to 2 spaces
+captionpos=b,                   % sets the caption-position to bottom
+breaklines=true,                % sets automatic line breaking
+breakatwhitespace=false,        % sets if automatic breaks should only happen at whitespace
+escapeinside={\%*}{*)}          % if you want to add a comment within your code
+}
+\lstdefinestyle{mystyle}{
+	backgroundcolor=\color{backcolour},   
+	commentstyle=\color{red},
+	keywordstyle=\bfseries\color{magenta},
+	numberstyle=\tiny\color{codegray},
+	stringstyle=\color{codegreen},
+	basicstyle=\footnotesize\ttfamily,
+	identifierstyle=\color{blue},
+	breakatwhitespace=false,         
+	breaklines=true,                 
+	captionpos=b,                    
+	keepspaces=true,                 
+	numbers=left,                    
+	numbersep=5pt,                  
+	showspaces=false,                
+	showstringspaces=false,
+	showtabs=false,                  
+	tabsize=2
+}
+
+\lstset{style=mystyle}
+
+%CONFIGURACIÓN DE MINTED PARA CÓDIGOS
+
+\usemintedstyle{vs}
+
+%COMIENZA EL DOCUMENTO
+
+\begin{document}
+%CONFIGURACIÓN DEL ENCABEZADO
+
+\usetikzlibrary{positioning}
+\tikzset{every picture/.style={line width=0.75pt}}    
+\pagestyle{plain}
+\begin{flushleft}
+Departamento de Física \hfill Mecánica de Fluidos\\
+Facultad de Cs. Físicas y Matemáticas\\
+\underline{Universidad de Concepción}
+\end{flushleft}
+
+\begin{flushright}\vspace{-5mm}
+\includegraphics[height=1.5cm]{escudo .jpg}
+\end{flushright}
+ 
+\begin{center}\vspace{-1cm}
+\textbf{\large Mecánica de Fluídos: Guía 1}\\   %TITULO
+Amaro A. Díaz Concha\\                         %NOMBRE
+\end{center}
+\rule{\linewidth}{0.1mm}
+\textbf{Pregunta 1:} Defina brevemente y explique las diferencias entre los tres estados comunes de la materia. Sólido, líquido y gaseoso. Muestre algunos ejemplos cotidianos que no puedan ser catalogados como uno de estos tres estados. \\
+\textbf{Solución:} \\
+La materia en estado sólido se define por tener una distancia igual entre todas sus moléculas y la fuerza de interacción entre dichas moléculas es predominantemente la fuerza nuclear fuerte. Estas moléculas no tienen libertad de movimiento, si no que están fijas en una posición, poseen una gran resistencia a deformarse y si llegaran a tener movimiento, este sería con respecto a un punto fijo. \\
+Los líquidos, similarmente a los sólidos,, también poseen una distancia relativamente fija entre sus partículas;; sin embargo, dichas partículas tendrán, en este caso, la libertad del movimiento, lo cual concede al estado líquido propiedades diferentes a los sólidos, como lo es el que los líquidos no son capaces de retener su forma, con lo que estos adaptan la forma de sus contenedores, las partículas cuando se mueven, lo hacen de forma agrupada. \\
+Los gaseosos, por otra parte, poseen una mayor distancia entre sus moléculas, mucho mayor a las de los líquidos y además estas tienen movimiento libre no necesariamente en grupos, cuando un gas de coloca dentro de un contenedor, se escapa. \\
+\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\textbf{Pregunta 2:} Busque información sobre tres estados exóticos de la materia y descríbalos brevemente. \\
+\textbf{Solución:} 
+\\
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\textbf{Pregunta 3:} Explique las limitaciones de la hipótesis del continuo y cómo esta hipótesis permite
+definir la noción de campo. Explique, además, qué se entiende por el concepto de “campo de
+velocidades” en el contexto de la hipótesis del continuo. \\
+\textbf{Solución:}
+La principal limitación de la hipótesis del continuo es cuando nos acercamos a niveles microscópicos, en los cuales la materia ya no puede ser idealizada como un continuo ya que se estaría ignorando las propiedades discretas de la materia, o sea, que a cierto nivel microscópico la materia deja de comportarse como un continuo y más como una "sopa" de moléculas las cuales tienen propiedades propias, como lo puede ser, velocidad propia y  colisión con otras moléculas. Cuando es posible usar la hipótesis del continuo, como se mencionó, en situaciones lo suficientemente macroscópicas tales que las propiedades individuales de las moléculas sean despreciables, se puede definir un concepto de campo, al asignar propiedades físicas a una posición en el espacio y tiempo, esto es posible mediante el promedio estadístico, el cual puede asignar un valor a un elemento de fluido, cuyo tamaño debe ser mucho mayor al que posee la distancia intramolecular de la sustancia estudiada, pero, mucho menor a la escala del sistema. Cuando se supone continuidad en estas propiedades físicas, es posible asignarseles funciones matemáticas suaves, lo que permite usar herramientas del cálculo diferencial. A diferencia de los campos escalares, que se les asignan un valor a una cierta posición en el espacio y tiempo, existe un concepto llamado campos de velocidades, cuyas componentes por posición en el espacio y tiempo, poseen magnitud, sentido y dirección, el campo de velocidades es una función vectorial que asigna a cada punto del espacio del medio continuo y en cada instante t, la velocidad promedio de todas las partículas que se encuentran en el elemento de fluido $\delta V$ alrededor de dicha posición, su descripción es del tipo Euleriana, ya que el campo se define en coordenadas espaciales fijas, como lo es el concepto que conocemos de sistema de referencia no inercial.
+\\
+\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\textbf{Pregunta 4:} Explique brevemente qué son las descripciones Euleriana y Lagrangia al describir el
+movimiento de fluidos, y ejemplifique estas descripciones con un experimento simple. \\
+\textbf{Solución:} El concepto de descripción Euleriana se basa en realizar el estudio de un fluido mediante una posición fija en el espacio con respecto a los elementos de fluido, o sea, se esta quieta mientras el fluido es quien se mueve y pasa através del medidor. En el caso de la descripción Lagrangeana, es el elemento de fluido el cual se sigue y mide a lo largo de su trayectoria dentro del fluido, cambiando así, la posición de la medición a lo largo del tiempo, sin embargo, no el sujeto al cual se está midiendo. Un ejemplo de una descripción Euleriana sería, un termómetro de cocina midiendo la temperatura dentro de una hoya con agua puesta al fuego a hervir, el termómetro se está quieto mientras que es el fluido (agua) quien se mueve, y para la descripción Lagrangeana se tienen la medición mediante localizadores a las corrientes de agua que transportan desechos a través del mar.\\
+\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\textbf{Pregunta 5:} ¿Cuál es la diferencia entre un fluido estacionario y uno imcompresible? Defina estos
+conceptos y utilice las descripciones Euleriana y Lagrangiana para explicarlos.
+\textbf{Solución}
+\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\textbf{Pregunta 6:} Defina qué es una propiedad intensiva y extensiva de un fluido y muestre algunos
+ejemplos.
+\textbf{Solución} 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\textbf{Pregunta 7:} 
+\textbf{Solución} 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\textbf{Pregunta 9}: En un espacio tri-dimensional, se puede demostrar la siguiente relaciòn entre el símbolo de Levi-Civita $\epsilon_{ijk}$ y la delta de Kronecker $\delta_{ij}$:
+\begin{equation} \label{r1}
+    \epsilon_{ijk}\epsilon_{ilm} = \delta_{jl}\delta_{km}-\delta_{jm} \delta_{kl}
+\end{equation}
+ Usando la relación \eqref{r1}, calcule las contracciones $\epsilon_{imn}\epsilon_{jmn}$ y $\epsilon_{ijk}\epsilon_{ijk}$. \\
+\textbf{Solución:} Usando la relación \eqref{r1}, podemos calcular lo siguiente, primero se intercambian los ìndices para dejar uno de los comunes, en este caso el ìndice $m$ primero, como hacemos una permutación por dada Levi-Civita, entonces los menos se cancelan.
+\begin{align*}
+    \epsilon_{min}\epsilon_{mjn} & = \delta_{ij}\delta_{nn}-\delta_{in}\delta_{nj} \\
+    & = 3 \delta_{ij} - \delta_{ij} \\
+    & = 2 \delta_{ij}
+\end{align*}
+Ahora para el caso de $\epsilon_{ijk}\epsilon_{ijk}$.
+\begin{align*}
+    \epsilon_{ijk}\epsilon_{ijk} &  = \delta_{jj}\delta_{kk}-\delta_{jk}\delta_{kj} \\
+    & = 9 - \delta_{jj} \\
+    & = 9 - 3 \\
+    & = 6
+\end{align*}
+Con lo cual queda lista la pregunta 9. \\
+\\
+\textbf{Pregunta 10:} Para calcular el producto cruz entre dos vectores $\vec{A}$ y $\vec{B}$ o el rotor de $\vec{A}$ con notación de índices, usamos el símbolo de Levi-Civita como sigue: 
+\begin{align}
+    (\vec{A}\times\vec{B})_i &  =\epsilon_{ijk}A_jB_k \\ 
+    (\nabla \times \vec{A})_i & = \epsilon_{ijk}\partial_jA_k
+\end{align}
+Considerando las expresiones anteriores, prueba las siguientes relaciones, utilizando siempre la notación de índices:
+\begin{align}
+    (a)  &\quad \vec{A}\times (\vec{B}\times\vec{C})  = (\vec{A}\cdot \vec{C}) \vec{B} - (\vec{A}\cdot\vec{B})\vec{C} \\
+    (b) &\quad (\vec{A}\times\vec{B}) \times \vec{C}  = (\vec{A}\cdot \vec{C})\vec{B} - (\vec{B}\cdot\vec{C}) \vec{A} \\
+    (c) &\quad \nabla \times (\nabla \times \vec{A})  = \nabla (\nabla \cdot \vec{A}) - \nabla^2 \vec{A} \\
+    (d) &\quad \nabla \times (\phi\vec{A})  = \phi (\nabla \times \vec{A}) + \nabla \phi \times \vec{A} \\
+    (e) &\quad \nabla (\vec{A}\cdot\vec{B})   = \vec{A}\times(\nabla\times\vec{B}) + \vec{B} \times (\nabla \times\vec{A}) + \vec{A}\cdot\nabla\vec{B} + \vec{B} \cdot\nabla\vec{A}
+\end{align}
+\textbf{Solución:} Usando las propiedades dadas y la notación de índices, reescribamos el lado izquierdo de las relaciones en notación de índices para trabajar con ellas
+\begin{align*}
+    (a)  \quad \vec{A}\times (\vec{B}\times\vec{C})   & = \vec{A}\times (\epsilon_{ijk}B_iC_j \hat{e_k}) \\
+    & = \epsilon_{ijk}B_iC_j (\vec{A}\times \hat{e_k}) \\
+    & = \epsilon_{ijk}B_iC_j (\epsilon_{lkm} A_l \hat{e_m}) \\
+    & = \epsilon_{ijk}\epsilon_{lkm} A_lB_iC_j\hat{e_m} \\
+\end{align*}
+Recordando la propiedad para el símbolo de Levi-Civita, $\epsilon_{ijk}\epsilon_{ilm} = \delta_{jl}\delta_{km}-\delta_{jm} \delta_{kl}$, así:
+\begin{align*}
+    \vec{A}\times (\vec{B}\times\vec{C})   & = (\delta_{im}\delta_{jl} - \delta_{il}\delta_{jm}) A_lB_iC_j\hat{e_m} \\
+    & = A_jB_m C_j \hat{e_m} - A_iB_iC_m\hat{e_m} \\
+    & = (\vec{A}\cdot\vec{C})\vec{B} - (\vec{A}\cdot\vec{B})\vec{C}
+\end{align*}
+Con lo cual se concluye que
+\begin{equation}
+    \quad \vec{A}\times (\vec{B}\times\vec{C})  = (\vec{A}\cdot \vec{C}) \vec{B} - (\vec{A}\cdot\vec{B})\vec{C}
+\end{equation}
+Ahora con el ítem $(b)$, cuya relación nos dice que
+\begin{align*}
+    (b) \quad (\vec{A}\times\vec{B}) \times \vec{C}   & = (\vec{A}\cdot \vec{C})\vec{B} - (\vec{B}\cdot\vec{C}) \vec{A} \\ & = (\epsilon_{ijk}A_iB_j\hat{e_k})\times \vec{C} \\
+    & = \epsilon_{ijk}A_iB_j (\hat{e_k}\times\vec{C}) \\
+    & = \epsilon_{ijk}A_iB_j (\epsilon_{klm}C_l\hat{e_m}) \\
+    & = \epsilon_{ijk}\epsilon_{klm}A_iB_jC_l\hat{e_m}
+\end{align*}
+De la misma forma, usamos la propiedad del símbolo de Levi-Civita usado en el ítem anterior: 
+\begin{align*}
+    (\vec{A}\times\vec{B}) \times \vec{C}   & = (\delta_{il}\delta_{jm} - \delta_{im}\delta_{jl}) A_iB_jC_l\hat{e_m} \\
+    & = A_lB_mC_L \hat{e_m} - A_mB_lC_l \hat{e_m} \\
+    & = (\vec{A}\cdot\vec{C})\vec{B} - (\vec{B}\cdot\vec{C})\vec{A}
+\end{align*}
+De lo cual se concluye que
+\begin{equation}
+   (\vec{A}\times\vec{B}) \times \vec{C} = (\vec{A}\cdot\vec{C})\vec{B} - (\vec{B}\cdot\vec{C})\vec{A}
+\end{equation}
+Ahora se sigue con el ítem $(c)$, cuya relación nos dice que:
+\begin{align*}
+    (c) \quad \nabla \times (\nabla \times \vec{A}) & = \nabla (\nabla \cdot \vec{A}) - \nabla^2 \vec{A} \\
+    & = \nabla \times (\epsilon_{ijk}\partial_iA_j\hat{e_k}) \\
+    & = \epsilon_{lkm} \epsilon_{ijk} \partial_l (\partial_i A_j) \hat{e_m} \\
+    & = (\delta_{lj}\delta_{mi}  - \delta_{li}\delta_{mj})\partial_l (\partial_i A_j) \hat{e_m} \\
+    & =   \delta_{lj}\delta_{mi} \partial_l (\partial_i A_j )\hat{e_m}-\delta_{li}\delta_{mj}\partial_l (\partial_i A_j) \hat{e_m} \\
+    & =   \partial_l \partial_m A_l \hat{e_m} -\partial_i\partial_i A_m \hat{e_m} \\
+    & =   \partial_m \partial_l A_l \hat{e_m}-\partial_i\partial_i A_m \hat{e_m} \\
+    & = \nabla (\nabla \cdot \vec{A}) - \nabla^2\vec{A} 
+\end{align*}
+Con lo cual, se concluye que
+\begin{equation}
+    (\vec{A}\times\vec{B}) \times \vec{C} = (\vec{A}\cdot\vec{C})\vec{B} - (\vec{B}\cdot\vec{C})\vec{A}
+\end{equation}
+Ahora seguimos con el ítem $(d)$, el cual nos dice que:
+\begin{align*}
+    (d) \nabla \times (\phi\vec{A})  & = \epsilon_{ijk}\partial_j(\phi A_k)\hat{e_i}  \\
+    & = \epsilon_{ijk}A_k\partial_j \phi \hat{e_i} + \phi  \epsilon_{ijk}\partial_j A_k\hat{e_i} \\
+    & = \phi  \epsilon_{ijk}\partial_j A_k\hat{e_i} + \epsilon_{ijk}A_k\partial_j \phi \hat{e_i} \\
+    & = \phi (\nabla \times \vec{A}) + \nabla \phi \times \vec{A}
+\end{align*}
+COn lo cual se concluye que: 
+\begin{equation}
+    \nabla \times (\phi\vec{A})  = \phi (\nabla \times \vec{A}) + \nabla \phi \times \vec{A}
+\end{equation}
+Luego, el ítem $(e)$ nos dice la siguiente relación:
+\begin{align*}
+    \nabla (\vec{A}\cdot\vec{B}) & = \partial_i(A_jB_k)\hat{e_i}
+\end{align*}
+??????????????????????????????????????????????????????
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\textbf{Pregunta 11:} Calcule la contracción $A_i=C_{ijk}C_{jk}$ explícitamente, donde $A_{i}$ , $B_{jk}$ y $C_{ijk}$ son las componentes de tres tensores en un espacio tri-dimensional de rangos 1,2 y 3 respectivamente. \\
+\\
+\textbf{Solución:} Teniendo en cuenta la convención de suma de Einstein desarollaremos los términos a la derecha de la contracción dada.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\textbf{Pregunta 18:} Verifique las siguientes identidades usando notación de índices
+\begin{align*}
+    (a) & \quad (\vec{A}\times \vec{B})\cdot (\vec{C}\times\vec{D}) = (\vec{A}\cdot \vec{C})(\vec{B}\cdot\vec{C}) - (\vec{B}\cdot \vec{C}) (\vec{A}\cdot \vec{D}) \\
+    (b) & \quad (\vec{A}\times \vec{B})\times (\vec{C}\times\vec{D}) = [\vec{A}\cdot (\vec{B} \times \vec{D})\vec{C}]- [\vec{A}\cdot (\vec{B}\times\vec{C})]\vec{D} \\
+    (c) & \quad \nabla \cdot (\vec{A}\times \vec{B}) = (\nabla \times \vec{A})\cdot \vec{B}  - \vec{A} \cdot (\nabla \times \vec{B}) 
+\end{align*}
+La relación $(a)$ nos dice lo siguiente:
+\begin{align*}
+    (\vec{A}\times \vec{B})\cdot (\vec{C}\times\vec{D}) & = (\epsilon_{ijk}A_iB_j\hat{e_k})\cdot (\epsilon_{lmn}C_lD_m\hat{e_n}) \\
+    & = \epsilon_{ijk}A_iB_j\epsilon_{lmn}C_lD_m(\hat{e_k}\cdot\hat{e_n}) \\
+    & = \epsilon_{ijk}A_iB_j\epsilon_{lmn}C_lD_m\delta_{kn} \\
+    & = \epsilon_{ijk}A_iB_j\epsilon_{lmk}C_lD_m \\
+    & = \epsilon_{ijk}\epsilon_{lmk} A_iB_jC_lD_m \\
+    & = (\delta_{il}\delta_{jm}-\delta_{im}\delta_{jl})A_iB_jC_lD_m \\
+    & = A_lB_mC_lD_m - A_mB_lC_lD_m \\
+    & = (\vec{A}\cdot \vec{C})(\vec{B}\cdot\vec{C}) - (\vec{B}\cdot \vec{C}) (\vec{A}\cdot \vec{D}) 
+\end{align*}
+Por tanto se concluye que:
+\begin{equation}
+    (\vec{A}\times \vec{B})\cdot (\vec{C}\times\vec{D}) = (\vec{A}\cdot \vec{C})(\vec{B}\cdot\vec{C}) - (\vec{B}\cdot \vec{C}) (\vec{A}\cdot \vec{D}) 
+\end{equation}
+La relación $(b)$ nos dice lo siguiente
+\begin{align*}
+    (\vec{A}\times \vec{B})\times (\vec{C}\times\vec{D})  & = (\epsilon_{ijk}A_iB_j\hat{e_k})\times (\epsilon_{lmn}C_lD_m\hat{e_n}) \\
+    & = \epsilon_{ijk}A_iB_j \epsilon_{lmn}C_lD_m  (\hat{e_k}\times \hat{e_n} ) \\
+    & = \epsilon_{ijk}A_iB_j \epsilon_{lmn}C_lD_m \epsilon_{knp} \hat{e_p} \\
+    & = \epsilon_{ijk}A_iB_jC_lD_m\epsilon_{lmn}\epsilon_{knp}\hat{e_p} \\
+    & = \epsilon_{ijk}A_iB_jC_lD_m (\delta_{lp}\delta_{mk}-\delta_{lk}\delta_{mp})\hat{e_p} \\
+    & =   \epsilon_{ijk}A_iB_jC_lD_m\delta_{lp}\delta_{mk})\hat{e_p} -\epsilon_{ijk}A_iB_jC_lD_m \delta_{lk}\delta_{mp} \hat{e_p}\\
+    & =   \epsilon_{ijk}A_iB_jC_pD_k \hat{e_p}-\epsilon_{ijk}A_iB_jC_kD_p \hat{e_p} \\
+    & = [\vec{A}\cdot (\vec{B} \times \vec{D})\vec{C}]- [\vec{A}\cdot (\vec{B}\times\vec{C})]\vec{D} 
+\end{align*}
+Con lo cual tenemos que:
+\begin{equation}
+    (\vec{A}\times \vec{B})\times (\vec{C}\times\vec{D}) = [\vec{A}\cdot (\vec{B} \times \vec{D})\vec{C}]- [\vec{A}\cdot (\vec{B}\times\vec{C})]\vec{D} 
+\end{equation}
+La relación $(c)$ nos dice lo siguiente: 
+\begin{align*}
+    \nabla \cdot (\vec{A}\times \vec{B})  &= \nabla \cdot (\epsilon_{ijk}A_iB_j\hat{e_k}) \\
+    & = \partial_k(\epsilon_{ijk}A_iB_j) \\
+    & = \epsilon_{ijk}B_j\partial_kA_i + \epsilon_{ijk}A_i\partial_kB_j \\
+    & = \epsilon_{ijk}A_i\partial_kB_j - \epsilon_{jik}B_j\partial_k A_i \\
+    & = (\nabla \times \vec{A})\cdot \vec{B}  - \vec{A} \cdot (\nabla \times \vec{B}) 
+\end{align*}
+De lo cual se concluye que:
+\begin{equation}
+    \nabla \cdot (\vec{A}\times \vec{B}) = (\nabla \times \vec{A})\cdot \vec{B}  - \vec{A} \cdot (\nabla \times \vec{B}) 
+\end{equation}
+\textbf{Pregunta 26:} Escriba las siguientes expresiones en coordenadas cartesianas, cilíndricas y esféricas.¿Cuál es el rango del tensor resultante de cada operación?
+\begin{enumerate}
+    \item El gradiente $\nabla p$ con $p$ un campo escalar.
+    \item La divergencia $\nabla \cdot \vec{u}$ con $\vec{u}$ un campo vectorial.
+    \item El gradiente vectorial $\nabla \vec{u}$ (notación equivalente $\nabla \otimes \vec{u}$).
+    \item El rotor $\nabla \times \vec{u}$.
+    \item La derivada convectiva $\vec{u}\cdot\nabla\vec{\omega}$, con $\vec{u}$ y $\vec{\omega}$ campos vectoriales.
+    \item La divergencia $\nabla \cdot \check{\sigma}$, con $\check{\sigma}$ un campo tensorial de rango 2. 
+    \item El gradiente $\nabla\check{\sigma}$
+\end{enumerate}
+Se calculará a continuación, el ítem $(1)$ que corresponde al gradiente escalar en los 3 diferentes sistemas de coordenadas mencionados. \\
+\textbf{Coordenadas cartesianas:} Escribir esta expresión en coordenadas cartesianas es bastante directo, ya que, sea un campo escalar $p$, asumiendo que no depende del tiempo, se tiene que
+\begin{equation}
+    \nabla p = \frac{\partial p}{\partial x}\hat{x} + \frac{\partial p}{\partial y}\hat{y} + \frac{\partial p}{\partial z}\hat{z} 
+\end{equation}
+o de una forma más compacta en notación de índices
+\begin{equation}
+    \nabla p = \partial_i p \hat{e_i}
+\end{equation}
+\textbf{Coordenadas cilíndricas:} En este caso, el cálculo no es tan directo como en cartesianas, con lo cual usaremos la definición de derivada material para obtenerlo. La derivada material, para un campo escalar independiente del tiempo de define de la siguiente manera
+\begin{equation}
+    dp=d\vec{r}\cdot \nabla p
+\end{equation}
+En donde $p(\vec{r})$ y $\vec{r}$ es el vector posición en el sistema de coordenadas elegido. En este caso, las coordenadas cilíndricas se definen de la siguiente forma
+\begin{align*}
+    x & =\rho\cos{\varphi} \\
+    y & = \rho \sin{\varphi} \\
+    z & = z
+\end{align*}
+y el vector posición está dado por
+\begin{equation}
+    \vec{r}=\rho(\cos{\varphi}\hat{x} + \sin{\varphi}\hat{y})+z\hat{z}
+\end{equation}
+ahora bien, este puede ser escrito en función de los vectores unitarios asociados a cada coordenada $(\rho,\varphi,z)$ tal que
+\begin{align*}
+    \hat{\rho}& =\frac{\partial \vec{r}}{\partial \rho} \\
+& = \cos{\varphi}\hat{x} + \sin{\varphi}\hat{y}
+\end{align*}
+y por tanto
+\begin{equation}
+    \hat{\rho} = \frac{\partial \vec{r}}{\partial \rho }
+\end{equation}
+
+y además para la coordenada $\varphi$
+\begin{align*}
+    \vec{\varphi}&=\frac{\partial \vec{r}}{\partial \varphi} \\
+    & = \rho (-\sin{\varphi}\hat{x} + \cos{\varphi}\hat{y})
+\end{align*}
+Pero este no es unitario, con lo cual
+\begin{align*}
+    \hat{\varphi} & =\frac{\vec{\varphi}}{||\vec{\varphi}||} \\
+    & = (-\sin{\varphi}\hat{x} + \cos{\varphi}\hat{y})
+\end{align*}
+y así
+\begin{equation}
+    \hat{\varphi}=\frac{1}{\rho}\frac{\partial \vec{r}}{\partial \varphi}
+\end{equation}
+El restante corresponde a $\hat{z}$ que al ser el mismo que en cartesianas es bastante directo, tal que
+\begin{equation}
+    \hat{z}=\frac{\partial \vec{r}}{\partial z}
+\end{equation}
+De lo cual, notemos que el vector posición se escribe de la siguiente manera en función de los vectories unitarios
+\begin{equation}
+    \vec{r}=\rho\hat{\rho}+z\hat{z}
+\end{equation}
+Ahora es necesario encontrar el diferencial del campo escalar $p$ al cual queremos encontrar el gradiente en coordenadas cilíndricas, el cual en términos generales está definido por
+\begin{equation}
+    dp(\vec{r})=  \frac{\partial p (\vec{r})}{\partial \rho}d\rho+\frac{\partial p(\vec{r})}{\partial \varphi}d\varphi+\frac{\partial p(\vec{r})}{\partial z}dz
+\end{equation}
+Ahora el diferencial del vector posición está dado por
+\begin{align*}
+     d\vec{r}& =  \frac{\partial \vec{r}}{\partial \rho}d\rho+\frac{\partial \vec{r}}{\partial \varphi}d\varphi+\frac{\partial \vec{r}}{\partial z}dz \\
+    & = \frac{\partial p (\rho\hat{\rho}+z\hat{z})}{\partial \rho}d\rho+\frac{\partial p(\rho\hat{\rho}+z\hat{z})}{\partial \varphi}d\varphi+\frac{\partial p(\rho\hat{\rho}+z\hat{z}) }{\partial z}dz \\
+    & = \hat{\rho}d\rho + \rho\hat{\varphi}d\varphi + \hat{z}dz
+\end{align*}
+Ahora, obtenido esto, lo reemplazamos en la definición de derivada material
+\begin{align*}
+    \frac{\partial p (\vec{r})}{\partial \rho}d\rho+\frac{\partial p(\vec{r})}{\partial \varphi}d\varphi+\frac{\partial p(\vec{r})}{\partial z}dz = (\hat{\rho}d\rho + \rho\hat{\varphi}d\varphi + \hat{z}dz ) \cdot \nabla p
+\end{align*}
+De lo cual, comparando término a término, ya que los diferenciales son linealmente independientes, obtenemos que
+\begin{equation}
+    \nabla p=\frac{\partial p }{\partial \rho} \hat{\rho} + \frac{1}{\rho} \frac{\partial p}{\partial \varphi} \hat{\varphi}+\frac{\partial p}{\partial z}\hat{z} 
+\end{equation}
+El cual corresponde al operador gradiente en coordenadas cilíndricas para un campo escalar independiente del tiempo. \\
+\textbf{Coordenadas esféricas:} Para realizar esta derivación en coordenadas esféricas es exactamente el mismo procedimiento. Las coordenadas esféricas se definen de la siguiente manera
+\begin{align*}
+    x & = \rho\sin{\theta}\cos{\varphi} \\
+   y  & = \rho \sin{\theta}\sin{\varphi} \\
+    z & = \rho \cos{\theta}
+\end{align*}
+Y el vector posición está dado por
+\begin{equation}
+    \vec{r}=\rho(\sin{\theta}\cos{\varphi}\hat{x}+\sin{\theta}\sin{\varphi}\hat{y}+\cos{\theta}\hat{z})
+\end{equation}
+Ahora, se realiza el cálculo de los vectores unitarios
+\begin{align*}
+    \hat{\rho} & = \frac{\partial \vec{r}}{\partial \rho} \\
+    & = \sin{\theta}\cos{\varphi}\hat{x}+\sin{\theta}\sin{\varphi}\hat{y}+\cos{\theta}\hat{z}
+\end{align*}
+Con ello, notemos que el vector posición puede ser descrito tan solo usando $\hat{\rho}$ de la siguiente manera
+\begin{equation}
+    \vec{r}=\rho\hat{\rho}
+\end{equation}
+Ahora calculamos el vector unitario asociado a la coordenada azimutal
+\begin{align*}
+    \vec{\varphi} & = \frac{\partial \vec{r}}{\partial \varphi} \\
+    & = \rho( -\sin{\theta}\sin{\varphi}\hat{x} + \sin{\theta}\cos{\varphi}\hat{y})
+\end{align*}
+De lo cual, claramente podemos notar que no es unitario, con lo cual
+\begin{align*}
+    \hat{\varphi} & =\frac{\vec{\varphi}}{||\vec{\varphi}||} \\
+    & = \frac{1}{\rho\sin{\theta}}\vec{\varphi}
+\end{align*}
+Así,
+\begin{equation}
+    \hat{\varphi}= - \sin{\phi}\hat{x}+\cos{\theta}\hat{y}
+\end{equation}
+Ahora, finalmente, obtendremos el vector unitario asociado a la coordenada polar
+\begin{align*}
+    \vec{\theta} & =\frac{\partial \vec{r}}{\partial \theta} \\
+    & = \rho(\cos{\theta}\cos{\varphi}\hat{x}+\cos{\theta}\sin{\varphi}\hat{y}-\sin{\theta}\hat{z})
+\end{align*}
+Lo cual, claramente no es unitario, con lo cual
+\begin{align*}
+    \hat{\theta} & = \frac{\vec{\theta}}{||\vec{\theta}||} \\
+    & = \cos{\theta}\cos{\varphi}\hat{x}+\cos{\theta}\sin{\varphi}\hat{y}-\sin{\theta}\hat{z}
+\end{align*}
+Ahora, calcularemos el diferencial del vector posición $\vec{r}$ en coordenadas esféricas, el cual está dado por
+\begin{align*}
+    d\vec{r} & =\frac{\partial \vec{r}}{\partial \rho} d\rho + \frac{\partial \vec{r}}{\partial \theta} d\theta + \frac{\partial \vec{r}}{\partial \varphi}d\varphi \\
+    & = \frac{\partial (\rho\hat{\rho})}{\partial \rho} d\rho + \frac{\partial (\rho\hat{\rho})}{\partial \theta} d\theta + \frac{\partial (\rho\hat{\rho})}{\partial \varphi}d\varphi \\
+    & = \hat{\rho}d\rho + \rho \hat{\theta} + \rho \sin{\theta} \hat{\varphi}d\varphi 
+\end{align*}
+Y en términos más generales, el diferencial de un campo escalar con respecto a coordenadas esféricas está dado por
+\begin{equation}
+    dp=\frac{\partial p}{\partial \rho} d\rho + \frac{\partial p}{\partial \theta} d\theta + \frac{\partial p}{\partial \varphi}d\varphi
+\end{equation}
+Ahora reemplazamos esto en la definición de derivada material independiente del tiempo como sigue
+\begin{align*}
+    \frac{\partial p}{\partial \rho} d\rho + \frac{\partial p}{\partial \theta} d\theta + \frac{\partial p}{\partial \varphi}d\varphi = (\hat{\rho}d\rho + \rho \hat{\theta} + \rho \sin{\theta} \hat{\varphi}d\varphi ) \cdot \nabla p 
+\end{align*}
+De lo cual, comparando término a término, ya que los diferenciales son linealmente independientes, obtenemos el gradiente de un campo escalar en coordenadas esféricas:
+\begin{equation}
+    \nabla p = \frac{\partial p}{\partial \rho}\hat{\rho} + \frac{1}{\rho}\frac{\partial p }{\partial \theta}\hat{\theta}+\frac{1}{\rho\sin{\theta}}\frac{\partial p }{\partial \varphi}\hat{\varphi}
+\end{equation}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Ahora se realizará el ítem $(3)$ en el cual se pide obtener el gradiente vectorial $\nabla \vec{u}$ de un campo vectorial $\vec{u}$ en los 3 sistemas de coordenadas mencionados.  \\
+\textbf{Coordenadas cartesianas:} Como esta derivación no es tan directa como el gradiente de un campo escalar, seremos más meticulosos en los desarrollos. Primero expresamos el campo vectorial $\vec{u}$ en función de los vectores unitarios, tal que
+\begin{equation}
+    \vec{u}(\vec{r})=u_x(\vec{r})\hat{x} + u_y(\vec{r})\hat{y}+u_z(\vec{r})\hat{z}
+\end{equation}
+Ahora tomaremos el diferencial de dicho campo vectorial como sigue
+\begin{equation}
+     d\vec{u}(\vec{r})=dx\frac{\partial}{\partial x}(u_x\hat{x} + u_y\hat{y}+u_z\hat{z}) + dy\frac{\partial}{\partial y}(u_x\hat{x} + u_y\hat{y}+u_z\hat{z})+dz\frac{\partial}{\partial z}(u_x\hat{x} + u_y\hat{y}+u_z\hat{z})
+\end{equation}
+Ahora, como en coordenadas cartesianas los vectores unitarios son independientes de las coordenadas nos ahorraremos muchos términos. Tomamos la derivada parcial y queda
+\begin{equation}
+    d\vec{u}(\vec{r}) = \left(\frac{\partial u_x}{\partial x}\hat{x}+\frac{\partial u_y}{\partial x}\hat{y}+\frac{\partial u_z}{\partial x}\hat{z}\right)dx +\left(\frac{\partial u_x}{\partial y}\hat{x}+\frac{\partial u_y}{\partial y}\hat{y}+\frac{\partial u_z}{\partial y}\hat{z}\right)dy+\left(\frac{\partial u_x}{\partial z}\hat{x}+\frac{\partial u_y}{\partial z}\hat{y}+\frac{\partial u_z}{\partial z}\hat{z}\right)dz
+\end{equation}
+Y además, de una forma más simple se tiene el diferencial del vector posición en coordenadas cartesianas como sigue
+\begin{align*}
+    d\vec{r} & =\frac{\partial \vec{r}}{\partial x}dx+\frac{\partial \vec{r}}{\partial y}dy+\frac{\partial \vec{r}}{\partial z}dz \\
+    & = \hat{x}dx+\hat{y}dy+\hat{z}dz
+\end{align*}
+Con lo cual, todo esto se reemplazará en la definición para la derivada material de un campo vectorial $\vec{u}$ independiente del tiempo.
+\begin{equation}
+    d\vec{u}(\vec{r})=d\vec{r}\cdot\nabla\vec{u}
+\end{equation}
+En lo cual el término $\nabla\vec{u}$ es llamado "gradiente vectorial" cuya definición en coordenadas cartesianas obtendremos a continuación:
+\begin{align*}
+    \left(\frac{\partial u_x}{\partial x}\hat{x}+\frac{\partial u_y}{\partial x}\hat{y}+\frac{\partial u_z}{\partial x}\hat{z}\right)dx +\left(\frac{\partial u_x}{\partial y}\hat{x}+\frac{\partial u_y}{\partial y}\hat{y}+\frac{\partial u_z}{\partial y}\hat{z}\right)dy+\left(\frac{\partial u_x}{\partial z}\hat{x}+\frac{\partial u_y}{\partial z}\hat{y}+\frac{\partial u_z}{\partial z}\hat{z}\right)dz
+  = (\hat{x}dx+\hat{y}dy+\hat{z}dz) \cdot \nabla \vec{u}
+\end{align*}
+De lo cual se puede obtener, comparando término con término de los diferenciales ya que, estos son linealmente independientes, que el gradiente vectorial de un campo vectorial $\vec{u}$ es:
+\begin{equation}
+    \nabla \vec{u}=\frac{\partial u_x}{\partial x}\hat{x}\hat{x}+\frac{\partial u_y}{\partial x}\hat{x}\hat{y}+\frac{\partial u_z}{\partial x}\hat{x}\hat{z} +\frac{\partial u_x}{\partial y}\hat{y}\hat{x}+\frac{\partial u_y}{\partial y}\hat{y}\hat{y}+\frac{\partial u_z}{\partial y}\hat{y}\hat{z}+\frac{\partial u_x}{\partial z}\hat{z}\hat{x}+\frac{\partial u_y}{\partial z}\hat{z}\hat{y}+\frac{\partial u_z}{\partial z}\hat{z}\hat{z}
+\end{equation}
+O quizá de una forma más compacta
+\begin{equation}
+    \nabla \vec{u}_{ij}=\partial_iu_j
+\end{equation}
+\textbf{Coordenadas cilíndricas:} Ahora se realizará la misma derivación pero en coordenadas cilíndricas, las cuales se definen como sigue 
+\begin{align*}
+    x & = \rho\sin{\theta}\cos{\varphi} \\
+   y  & = \rho \sin{\theta}\sin{\varphi} \\
+    z & = \rho \cos{\theta}
+\end{align*}
+Y el vector posición está dado por
+\begin{equation}
+    \vec{r}=\rho(\sin{\theta}\cos{\varphi}\hat{x}+\sin{\theta}\sin{\varphi}\hat{y}+\cos{\theta}\hat{z})
+\end{equation}
+ahora bien, este puede ser escrito en función de los vectores unitarios asociados a cada coordenada $(\rho,\varphi,z)$ tal que
+\begin{align*}
+    \hat{\rho}& =\frac{\partial \vec{r}}{\partial \rho} \\
+& = \cos{\varphi}\hat{x} + \sin{\varphi}\hat{y}
+\end{align*}
+y por tanto
+\begin{equation}
+    \hat{\rho} = \frac{\partial \vec{r}}{\partial \rho }
+\end{equation}
+
+y además para la coordenada $\varphi$
+\begin{align*}
+    \vec{\varphi}&=\frac{\partial \vec{r}}{\partial \varphi} \\
+    & = \rho (-\sin{\varphi}\hat{x} + \cos{\varphi}\hat{y})
+\end{align*}
+Pero este no es unitario, con lo cual
+\begin{align*}
+    \hat{\varphi} & =\frac{\vec{\varphi}}{||\vec{\varphi}||} \\
+    & = (-\sin{\varphi}\hat{x} + \cos{\varphi}\hat{y})
+\end{align*}
+y así
+\begin{equation}
+    \hat{\varphi}=\frac{1}{\rho}\frac{\partial \vec{r}}{\partial \varphi}
+\end{equation}
+El restante corresponde a $\hat{z}$ que al ser el mismo que en cartesianas es bastante directo, tal que
+\begin{equation}
+    \hat{z}=\frac{\partial \vec{r}}{\partial z}
+\end{equation}
+De lo cual, notemos que el vector posición se escribe de la siguiente manera en función de los vectories unitarios
+\begin{equation}
+    \vec{r}=\rho\hat{\rho}+z\hat{z}
+\end{equation}
+Ahora bien, a diferencia del campo escalar, el campo vectorial también estará en función de los vectores unitarios, de la siguiente manera
+\begin{equation}
+    \vec{u}=u_{\rho}\hat{\rho}+u_{\varphi}\hat{\varphi}+u_z\hat{z}
+\end{equation}
+Del cual necesitamos obtener su diferencial, con lo cual
+\begin{align*}
+    d\vec{u} & =d\rho \frac{\partial }{\partial \rho}(u_{\rho}\hat{\rho}+u_{\varphi}\hat{\varphi}+u_z\hat{z}) + d\varphi \frac{\partial}{\partial \varphi} (u_{\rho}\hat{\rho}+u_{\varphi}\hat{\varphi}+u_z\hat{z}) + dz\frac{\partial}{\partial z}(u_{\rho}\hat{\rho}+u_{\varphi}\hat{\varphi}+u_z\hat{z}) \\
+    & = d\rho (\frac{\partial u_{\rho}}{\partial \rho}\hat{\rho} + \frac{\partial u_{\varphi}}{\partial \rho}\hat{\varphi} + \frac{\partial u_{z}}{\partial \rho}\hat{z}) + d\varphi(\frac{\partial u_\rho}{\partial \varphi}\hat{\rho} + u_\rho \hat{\varphi} + \frac{\partial u_\varphi}{\partial \varphi}\hat{\varphi} - u_\varphi\hat{\rho} + \frac{\partial u_z}{\partial \varphi}\hat{z}) + dz(\frac{\partial u_\rho}{\partial z}\hat{\rho}+\frac{\partial u_\varphi}{\partial z}\hat{\varphi}+\frac{\partial u_z}{\partial z}\hat{z})
+\end{align*}
+Obtenido esto, ahora necesitamos el diferencial del operador posición en coordenadas cilíndricas, el cual está dado por
+\begin{align*}
+    d\vec{r} & =d\rho \frac{\partial}{\partial \rho}(\rho\hat{\rho}+z\hat{z}) + d\varphi \frac{\partial }{\partial \varphi} (\rho\hat{\rho}+z\hat{z}) + dz\frac{\partial}{\partial z}(\rho\hat{\rho}+z\hat{z}) \\
+    & = d\rho\hat{\rho} + \rho d\varphi\hat{\varphi} + dz\hat{z}
+\end{align*}
+Ahora reemplazamos esto en la definición de derivada material para un campo escalar
+\begin{align*}
+    d\rho (\frac{\partial u_{\rho}}{\partial \rho}\hat{\rho} + \frac{\partial u_{\varphi}}{\partial \rho}\hat{\varphi} + \frac{\partial u_{z}}{\partial \rho}\hat{z}) + d\varphi\left[\left(\frac{\partial u_\rho}{\partial \varphi}  - u_\varphi \right)\hat{\rho}+ \left(u_\rho + \frac{\partial u_\varphi}{\partial \varphi}\right)\hat{\varphi} + \frac{\partial u_z}{\partial \varphi}\hat{z}\right] + dz(\frac{\partial u_\rho}{\partial z}\hat{\rho}+\frac{\partial u_\varphi}{\partial z}\hat{\varphi}+\frac{\partial u_z}{\partial z}\hat{z}) =( d\rho\hat{\rho} + \rho d\varphi\hat{\varphi} + dz\hat{z} ) \cdot \nabla \vec{u}
+\end{align*}
+De lo cual, comparando término con término debido a que los diferenciales son linealmente independientes entre sí, obtenemos el siguiente resultado
+\begin{equation}
+    \nabla \vec{u}=\frac{\partial u_\rho}{\partial \rho}\hat{\rho}\hat{\rho} + \frac{\partial u_\varphi}{\partial \rho}\hat{\rho}\hat{\varphi} + \frac{\partial u_z}{\partial \rho}\hat{\rho}\hat{z} + \frac{1}{\rho}\left[\left(\frac{\partial u_\rho}{\partial \varphi} - u_\varphi \right)\hat{\varphi}\hat{\rho} +\left(\frac{\partial u_\varphi}{\partial \varphi} 
+ + u_\rho\right)\hat{\varphi}\hat{\varphi} + \frac{\partial u_z}{\partial z} \hat{\varphi}\hat{z}\right] + \frac{\partial u_\rho}{\partial z}\hat{z}\hat{\rho} + \frac{\partial u_\varphi}{\partial z}\hat{z}\hat{\varphi} + \frac{\partial u_z}{\partial z}\hat{z}\hat{z} 
+\end{equation}
+\textbf{Coordenadas esfércias:} Al igual que en coordenadas cilíndricas, debemos tener sumo cuidado con las dependencias coordenadas de los vectores unitarios, con lo cual empezamos con la definición de coordenadas esféricas:
+\begin{align*}
+    x & = \rho\sin{\theta}\cos{\varphi} \\
+   y  & = \rho \sin{\theta}\sin{\varphi} \\
+    z & = \rho \cos{\theta}
+\end{align*}
+Y el vector posición está dado por
+\begin{equation}
+    \vec{r}=\rho(\sin{\theta}\cos{\varphi}\hat{x}+\sin{\theta}\sin{\varphi}\hat{y}+\cos{\theta}\hat{z})
+\end{equation}
+Ahora, se realiza el cálculo de los vectores unitarios
+\begin{align*}
+    \hat{\rho} & = \frac{\partial \vec{r}}{\partial \rho} \\
+    & = \sin{\theta}\cos{\varphi}\hat{x}+\sin{\theta}\sin{\varphi}\hat{y}+\cos{\theta}\hat{z}
+\end{align*}
+Con ello, notemos que el vector posición puede ser descrito tan solo usando $\hat{\rho}$ de la siguiente manera
+\begin{equation}
+    \vec{r}=\rho\hat{\rho}
+\end{equation}
+Ahora calculamos el vector unitario asociado a la coordenada azimutal
+\begin{align*}
+    \vec{\varphi} & = \frac{\partial \vec{r}}{\partial \varphi} \\
+    & = \rho( -\sin{\theta}\sin{\varphi}\hat{x} + \sin{\theta}\cos{\varphi}\hat{y})
+\end{align*}
+De lo cual, claramente podemos notar que no es unitario, con lo cual
+\begin{align*}
+    \hat{\varphi} & =\frac{\vec{\varphi}}{||\vec{\varphi}||} \\
+    & = \frac{1}{\rho\sin{\theta}}\vec{\varphi}
+\end{align*}
+Así,
+\begin{equation}
+    \hat{\varphi}= - \sin{\varphi}\hat{x}+\cos{\varphi}\hat{y}
+\end{equation}
+Ahora, finalmente, obtendremos el vector unitario asociado a la coordenada polar
+\begin{align*}
+    \vec{\theta} & =\frac{\partial \vec{r}}{\partial \theta} \\
+    & = \rho(\cos{\theta}\cos{\varphi}\hat{x}+\cos{\theta}\sin{\varphi}\hat{y}-\sin{\theta}\hat{z})
+\end{align*}
+Lo cual, claramente no es unitario, con lo cual
+\begin{align*}
+    \hat{\theta} & = \frac{\vec{\theta}}{||\vec{\theta}||} \\
+    & = \cos{\theta}\cos{\varphi}\hat{x}+\cos{\theta}\sin{\varphi}\hat{y}-\sin{\theta}\hat{z}
+\end{align*}
+Ahora, calcularemos el diferencial del vector posición $\vec{r}$ en coordenadas esféricas, el cual está dado por
+\begin{align*}
+    d\vec{r} & =\frac{\partial \vec{r}}{\partial \rho} d\rho + \frac{\partial \vec{r}}{\partial \theta} d\theta + \frac{\partial \vec{r}}{\partial \varphi}d\varphi \\
+    & = \frac{\partial (\rho\hat{\rho})}{\partial \rho} d\rho + \frac{\partial (\rho\hat{\rho})}{\partial \theta} d\theta + \frac{\partial (\rho\hat{\rho})}{\partial \varphi}d\varphi \\
+    & = \hat{\rho}d\rho + \rho \hat{\theta} + \rho \sin{\theta} \hat{\varphi}d\varphi \\
+\end{align*}
+Luego de esto, es necesario generalizar un campo vectorial en coordenadas esféricas, el cual estará dado por:
+\begin{equation}
+    \vec{u}=u_\rho\hat{\rho}+u_\varphi\hat{\varphi} + u_\theta\hat{\theta}
+\end{equation}
+Antes de seguir recordemos unas propiedades importantes de los vectores unitarios en coordenadas esféricas: 
+\begin{align*}
+   & \frac{\partial \hat{\rho}}{\partial \varphi} = \hat{\varphi} \sin{\theta}, & \quad \frac{\partial \hat{\rho}}{\partial \theta} = \hat{\theta} , & \quad \frac{\partial \hat{\rho}}{\partial \rho} = 0 \\
+    & \frac{\partial \hat{\varphi}}{\partial \rho} = 0,&  \quad \frac{\partial \hat{\varphi}}{\partial \theta} =0, & \quad \frac{\partial \hat{\varphi}}{\partial \varphi}=-\sin{\theta}\hat{\rho}-\cos{\theta}\hat{\theta} \\
+    & \frac{\partial \hat{\theta}}{\partial \rho}= 0, & \quad \frac{\partial \hat{\theta}}{\partial \theta}=-\hat{\rho} , & \quad \frac{\partial \hat{\theta}}{\partial \varphi}= \cos{\theta}\hat{\varphi} \\
+\end{align*}
+Y en términos más generales, el diferencial de un campo vectorial en coordenadas esféricas está dado por
+\begin{align*}
+    d\vec{u} & = d\rho \frac{\partial}{\partial \rho}(u_\rho\hat{\rho}+u_\varphi\hat{\varphi} + u_\theta\hat{\theta}) + d\varphi\frac{\partial}{\partial \phi}(u_\rho\hat{\rho}+u_\varphi\hat{\varphi} + u_\theta\hat{\theta}) + d\theta\frac{\partial}{\partial \theta}(u_\rho\hat{\rho}+u_\varphi\hat{\varphi} + u_\theta\hat{\theta}) \\
+    & = d\rho \left( \frac{\partial u_\rho}{\partial \rho}\hat{\rho} + \frac{\partial u_\varphi}{\partial \rho}\hat{\varphi} + \frac{\partial u_\theta}{\partial \rho}\hat{\theta} \right) + d\varphi \left( \frac{\partial u_\rho}{\partial \varphi} \hat{\rho}+ u_\rho\sin{\theta}\hat{\varphi}  + \frac{\partial u_\varphi}{\partial \varphi}\hat{\varphi}  -u_\varphi \left( \sin{\theta}\hat{\rho} + \cos{\theta}\hat{\theta} \right)+  \frac{\partial u_\theta}{\partial \varphi}\hat{\theta} + u_\theta\cos{\theta}\hat{\varphi}\right)\dots \\ &  
+    + d\theta \left(  \frac{\partial u_\rho}{\partial \theta}\hat{\rho} + u_\rho\hat{\theta} + \frac{\partial u_\varphi}{\partial \theta}\hat{\varphi} + \frac{\partial u_\theta}{\partial \theta}\hat{\theta} - u_\theta\hat{\rho}\right)
+\end{align*}
+Obtenido esto, se reemplaza en la definición de derivada material para un campo vectorial
+\begin{align*}
+   & d\rho \left( \frac{\partial u_\rho}{\partial \rho}\hat{\rho} + \frac{\partial u_\varphi}{\partial \rho}\hat{\varphi} + \frac{\partial u_\theta}{\partial \rho}\hat{\theta} \right) + d\varphi \left( \frac{\partial u_\rho}{\partial \varphi} \hat{\rho}+ u_\rho\sin{\theta}\hat{\varphi}  + \frac{\partial u_\varphi}{\partial \varphi}\hat{\varphi}  -u_\varphi \left( \sin{\theta}\hat{\rho} + \cos{\theta}\hat{\theta} \right)+  \frac{\partial u_\theta}{\partial \varphi}\hat{\theta} + u_\theta\cos{\theta}\hat{\varphi}\right)\dots \\ &  
+    + d\theta \left(  \frac{\partial u_\rho}{\partial \theta}\hat{\rho} + u_\rho\hat{\theta} + \frac{\partial u_\varphi}{\partial \theta}\hat{\varphi} + \frac{\partial u_\theta}{\partial \theta}\hat{\theta} - u_\theta\hat{\rho}\right)= ( \hat{\rho}d\rho + \rho \hat{\theta} + \rho \sin{\theta} \hat{\varphi}d\varphi) \cdot \nabla \vec{u}
+\end{align*}
+Así, se obtiene la definición para el gradiente vectorial en coordenadas esféricas
+\begin{align}
+    \nabla \vec{u} & =\frac{\partial u_\rho}{\partial \rho}\hat{\rho}\hat{\rho} + \frac{\partial u_\varphi}{\partial \rho}\hat{\rho}\hat{\varphi} + \frac{\partial u_\theta}{\partial \rho}\hat{\rho}\hat{\theta} + \frac{1}{\rho \sin{\theta}}\left[\left(\frac{\partial u_\rho}{\partial \varphi}-u_\varphi\sin{\theta} \right)\hat{\varphi}\hat{\rho}+ \left( u_\rho \sin{\theta} + \frac{\partial u_\varphi}{\partial \varphi} + u_\theta \cos{\theta}\right)\hat{\varphi}\hat{\varphi}+ \left( \frac{\partial u_\theta}{\partial \varphi}-u_\varphi\cos{\theta}\right)\hat{\varphi}\hat{\theta}\right] \dots \\
+    & + \frac{1}{\rho}\left[ \left( \frac{\partial u_\rho}{\partial \theta} -u_\theta \right)\hat{\theta}\hat{\rho} + \frac{\partial u_\varphi}{\partial \theta}\hat{\theta}\hat{\varphi} + \left( u_\rho + \frac{\partial u_\theta }{\partial \theta}\right)\hat{\theta}\hat{\theta}\right]
+\end{align}
+Ahora realizaremos el ítem $(7)$ el cual nos pide encontrar el gradiente de un tensor general de rango $\nabla \check{\sigma}$ 
+\textbf{Coordenadas cilíndricas:} Como ya conocemos los vectores unitarios en coordenadas cilíndricas, pasaremos a escribir la forma general de un tensor de rango dos y su respectivo diferencial total:
+\begin{equation}
+   \check{\sigma}=u_{\rho \rho}\hat{\rho} \hat{\rho} + u_{\rho \varphi} \hat{\rho} \hat{\varphi} + u_{\rho z}\hat{\rho }\hat{z} + u_{\varphi \rho}\hat{\varphi} \hat{\rho} + u_{\varphi \varphi} \hat{\varphi} \hat{\varphi} + u_{\varphi z}\hat{\varphi }\hat{z} + u_{z \rho} \hat{z}\hat{\rho} + u_{z \varphi}\hat{z}\hat{\varphi} + u_{z z} \hat{z}\hat{z}
+\end{equation}
+El cual tomaremos su diferencial total como sigue: 
+\begin{align*}
+    d\check{\sigma} & =d\rho \frac{\partial}{\partial \rho} (u_{\rho \rho}\hat{\rho} \hat{\rho} + u_{\rho \varphi} \hat{\rho} \hat{\varphi} + u_{\rho z}\hat{\rho }\hat{z} + u_{\varphi \rho}\hat{\varphi} \hat{\rho} + u_{\varphi \varphi} \hat{\varphi} \hat{\varphi} + u_{\varphi z}\hat{\varphi }\hat{z} + u_{z \rho} \hat{z}\hat{\rho} + u_{z \varphi}\hat{z}\hat{\varphi} + u_{z z} \hat{z}\hat{z})\dots \\ & + d\varphi \frac{\partial }{\partial \varpi} (u_{\rho \rho}\hat{\rho} \hat{\rho} + u_{\rho \varphi} \hat{\rho} \hat{\varphi} + u_{\rho z}\hat{\rho }\hat{z} + u_{\varphi \rho}\hat{\varphi} \hat{\rho} + u_{\varphi \varphi} \hat{\varphi} \hat{\varphi} + u_{\varphi z}\hat{\varphi }\hat{z} + u_{z \rho} \hat{z}\hat{\rho} + u_{z \varphi}\hat{z}\hat{\varphi} + u_{z z} \hat{z}\hat{z}) \dots \\ & + dz\frac{\partial}{\partial z}(u_{\rho \rho}\hat{\rho} \hat{\rho} + u_{\rho \varphi} \hat{\rho} \hat{\varphi} + u_{\rho z}\hat{\rho }\hat{z} + u_{\varphi \rho}\hat{\varphi} \hat{\rho} + u_{\varphi \varphi} \hat{\varphi} \hat{\varphi} + u_{\varphi z}\hat{\varphi }\hat{z} + u_{z \rho} \hat{z}\hat{\rho} + u_{z \varphi}\hat{z}\hat{\varphi} + u_{z z} \hat{z}\hat{z}) \\
+    & = d\rho \left( \frac{\partial u_{\rho \rho }}{\partial \rho}  \hat{\rho} \hat{\rho} +  \frac{\partial u_{\rho \varphi }}{\partial \rho}\hat{\rho} \hat{\varphi}+\frac{\partial u_{\rho z }}{\partial \rho}\hat{\rho} \hat{z} + \frac{\partial u_{\varphi \rho }}{\partial \rho}\hat{\varphi} \hat{\rho}  + \frac{\partial u_{\varphi \varphi }}{\partial \rho}\hat{\varphi} \hat{\varphi}  + \frac{\partial u_{\varphi z }}{\partial \rho}\hat{\varphi} \hat{z}  + \frac{\partial u_{z \rho }}{\partial \rho}\hat{z} \hat{\rho} + \frac{\partial u_{z \varphi }}{\partial \rho}\hat{z} \hat{\varphi} + \frac{\partial u_{zz }}{\partial \rho}\hat{z} \hat{z}   \right)\dots \\
+    & +  
+\end{align*}
+\end{document}

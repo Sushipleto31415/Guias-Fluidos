@@ -1,0 +1,137 @@
+%CONFIGURACIÓN DEL DOCUMENTO Y HOJA
+
+\documentclass[11pt,letterpaper]{article}
+\setlength{\parindent}{0em}                  %DISTANCIA SANGRÍA
+\setlength{\parskip}{0.5em}                  %DISTANCIA ENTRE PÁRRAFOS
+\textwidth 6.5in
+\textheight 9.in
+\oddsidemargin 0in
+\headheight 0in
+
+%PAQUETES DEL TEMPLATE
+
+\usepackage{fancybox}
+\usepackage[utf8]{inputenc}
+\usepackage{epsfig,graphicx}
+\usepackage{multicol,pst-plot}
+\usepackage{pstricks}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{physics} %Para símbolos físicos más bonitos
+\usepackage{amssymb}
+\usepackage{eucal}
+\usepackage[left=1in,right=1in,top=1in,bottom=1in]{geometry} %Forma estándar
+%\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry} %Original de la plantilla
+\usepackage{txfonts}
+\usepackage[spanish]{babel}
+\usepackage[colorlinks]{hyperref}
+\usepackage{cancel}
+\usepackage{caption}
+\usepackage{float}
+\usepackage{upgreek}
+\usepackage{gensymb}
+\usepackage{subfigure}
+\usepackage{siunitx}
+\usepackage{color}
+\usepackage{tikz}
+\usepackage{listings}
+\usepackage{minted}
+\usepackage{mdframed}
+\usepackage{natbib}
+\bibliographystyle{mnras}
+\setcitestyle{aysep{","}}
+\usepackage{multicol}
+\renewcommand{\bibpreamble}{\begin{multicols}{2}}
+\renewcommand{\bibpostamble}{\end{multicols}}
+\setlength{\bibsep}{3pt}
+\newcommand*\vtick{\textsc{\char13}}
+%DEFINICIÓN DE COLORES EXTRAS
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.95}
+\hypersetup{colorlinks=true,linkcolor=codegreen,citecolor=blue,filecolor=blue,urlcolor=magenta,}
+
+%CONFIGURACIÓN DE LSTLISTINGS PARA CÓDIGOS
+
+\lstset{ %
+language=python,                % choose the language of the code
+basicstyle=\footnotesize,       % the size of the fonts that are used for the code
+numbers=left,                   % where to put the line-numbers
+numberstyle=\footnotesize,      % the size of the fonts that are used for the line-numbers
+stepnumber=1,                   % the step between two line-numbers. If it is 1 each line will be numbered
+numbersep=5pt,                  % how far the line-numbers are from the code
+backgroundcolor=\color{white},  % choose the background color. You must add \usepackage{color}
+showspaces=false,               % show spaces adding particular underscores
+showstringspaces=false,         % underline spaces within strings
+showtabs=false,                 % show tabs within strings adding particular underscores
+frame=single,                   % adds a frame around the code
+tabsize=2,                      % sets default tabsize to 2 spaces
+captionpos=b,                   % sets the caption-position to bottom
+breaklines=true,                % sets automatic line breaking
+breakatwhitespace=false,        % sets if automatic breaks should only happen at whitespace
+escapeinside={\%*}{*)}          % if you want to add a comment within your code
+}
+\lstdefinestyle{mystyle}{
+	backgroundcolor=\color{backcolour},   
+	commentstyle=\color{red},
+	keywordstyle=\bfseries\color{magenta},
+	numberstyle=\tiny\color{codegray},
+	stringstyle=\color{codegreen},
+	basicstyle=\footnotesize\ttfamily,
+	identifierstyle=\color{blue},
+	breakatwhitespace=false,         
+	breaklines=true,                 
+	captionpos=b,                    
+	keepspaces=true,                 
+	numbers=left,                    
+	numbersep=5pt,                  
+	showspaces=false,                
+	showstringspaces=false,
+	showtabs=false,                  
+	tabsize=2
+}
+
+\lstset{style=mystyle}
+
+%CONFIGURACIÓN DE MINTED PARA CÓDIGOS
+
+\usemintedstyle{vs}
+
+%COMIENZA EL DOCUMENTO
+
+\begin{document}
+%CONFIGURACIÓN DEL ENCABEZADO
+
+\usetikzlibrary{positioning}
+\tikzset{every picture/.style={line width=0.75pt}}    
+\pagestyle{plain}
+\begin{flushleft}
+Departamento de Física \hfill Mecánica de Fluidos\\
+Facultad de Cs. Físicas y Matemáticas\\
+\underline{Universidad de Concepción}
+\end{flushleft}
+
+\begin{flushright}\vspace{-5mm}
+\includegraphics[height=1.5cm]{escudo .jpg}
+\end{flushright}
+ 
+\begin{center}\vspace{-1cm}
+\textbf{\large Mecánica de Fluídos: Guía 1}\\   %TITULO
+Amaro A. Díaz Concha\\                         %NOMBRE
+\end{center}
+\rule{\linewidth}{0.1mm}
+\textbf{Pregunta 1:} Un cubo de hielo flota en un vaso de agua. Cuando el hielo se derrite, ¿qué nivel de agua tiene? \\
+\textbf{Solución:} \\ 
+Cuando un hielo que flota en un vaso de agua se derrite, el nivel del agua se reduce, ya que el hielo es menos denso que el agua, y por ende ocupa más volumen que la dicha agua, con lo cual, al derretirse, volviéndose agua, ocupará menos volumen que cuando estaba vuelto hielo.
+
+\textbf{Pregunta 2:} Cierto fluido tiene un campo de velocidades de la forma
+\begin{equation}
+    \vec{u} = \frac{1}{r(x+r)} [(x+ar)\hat{x} + (y+br)\hat{y} + (z+cr)\hat{z}],
+\end{equation}
+donde $r=\sqrt{x^2+y^2+z^2}$. Encuentre las condiciones para las constantes a, b y c de modo que el fluido sea \textbf{incompresible}. \\
+\textbf{Solución:} \\
+Hola
+
+\end{document}

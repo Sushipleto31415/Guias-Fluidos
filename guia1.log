@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2026/dev/Arch Linux) (preloaded format=pdflatex 2025.4.5)  7 APR 2025 02:01
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2026/dev/Arch Linux) (preloaded format=pdflatex 2025.4.5)  6 APR 2025 23:15
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**guia2.tex
-(./guia2.tex
+**guia1.tex
+(./guia1.tex
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
 (/usr/share/texmf-dist/tex/latex/base/article.cls
@@ -1121,53 +1121,53 @@ Package: natbib 2010/09/13 8.31b (PWD, AO)
 LaTeX Info: Redefining \cite on input line 694.
 \c@NAT@ctr=\count439
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 54.
+Package hyperref Info: Option `colorlinks' set `true' on input line 55.
  (/usr/share/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2024/09/23 1.10c listings language file
 )
-LaTeX Font Info:    Trying to load font information for OT1+txr on input line 104.
+LaTeX Font Info:    Trying to load font information for OT1+txr on input line 105.
  (/usr/share/texmf-dist/tex/latex/txfonts/ot1txr.fd
 File: ot1txr.fd 2000/12/15 v3.1
-) (./guia2.aux
+) (./guia1.aux
 LaTeX Info: Redefining \. on input line 13.
 LaTeX Info: Redefining \% on input line 13.
 )
-\openout1 = `guia2.aux'.
+\openout1 = `guia1.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/txmi/m/it on input line 104.
-LaTeX Font Info:    Trying to load font information for OML+txmi on input line 104.
+LaTeX Font Info:    Checking defaults for OML/txmi/m/it on input line 105.
+LaTeX Font Info:    Trying to load font information for OML+txmi on input line 105.
  (/usr/share/texmf-dist/tex/latex/txfonts/omltxmi.fd
 File: omltxmi.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 104.
-LaTeX Font Info:    Checking defaults for OMS/txsy/m/n on input line 104.
-LaTeX Font Info:    Trying to load font information for OMS+txsy on input line 104.
+LaTeX Font Info:    ... okay on input line 105.
+LaTeX Font Info:    Checking defaults for OMS/txsy/m/n on input line 105.
+LaTeX Font Info:    Trying to load font information for OMS+txsy on input line 105.
  (/usr/share/texmf-dist/tex/latex/txfonts/omstxsy.fd
 File: omstxsy.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 104.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 104.
-LaTeX Font Info:    ... okay on input line 104.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 104.
-LaTeX Font Info:    ... okay on input line 104.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 104.
-LaTeX Font Info:    ... okay on input line 104.
-LaTeX Font Info:    Checking defaults for OMX/txex/m/n on input line 104.
-LaTeX Font Info:    Trying to load font information for OMX+txex on input line 104.
+LaTeX Font Info:    ... okay on input line 105.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 105.
+LaTeX Font Info:    ... okay on input line 105.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 105.
+LaTeX Font Info:    ... okay on input line 105.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 105.
+LaTeX Font Info:    ... okay on input line 105.
+LaTeX Font Info:    Checking defaults for OMX/txex/m/n on input line 105.
+LaTeX Font Info:    Trying to load font information for OMX+txex on input line 105.
  (/usr/share/texmf-dist/tex/latex/txfonts/omxtxex.fd
 File: omxtxex.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 104.
-LaTeX Font Info:    Checking defaults for U/txexa/m/n on input line 104.
-LaTeX Font Info:    Trying to load font information for U+txexa on input line 104.
+LaTeX Font Info:    ... okay on input line 105.
+LaTeX Font Info:    Checking defaults for U/txexa/m/n on input line 105.
+LaTeX Font Info:    Trying to load font information for U+txexa on input line 105.
  (/usr/share/texmf-dist/tex/latex/txfonts/utxexa.fd
 File: utxexa.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 104.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 104.
-LaTeX Font Info:    ... okay on input line 104.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 104.
-LaTeX Font Info:    ... okay on input line 104.
+LaTeX Font Info:    ... okay on input line 105.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 105.
+LaTeX Font Info:    ... okay on input line 105.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 105.
+LaTeX Font Info:    ... okay on input line 105.
  (/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count440
@@ -1221,12 +1221,12 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Info: Redefining \. on input line 104.
-LaTeX Info: Redefining \% on input line 104.
-Package hyperref Info: Link coloring ON on input line 104.
-(./guia2.out) (./guia2.out)
+LaTeX Info: Redefining \. on input line 105.
+LaTeX Info: Redefining \% on input line 105.
+Package hyperref Info: Link coloring ON on input line 105.
+(./guia1.out) (./guia1.out)
 \@outlinefile=\write6
-\openout6 = `guia2.out'.
+\openout6 = `guia1.out'.
 
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
@@ -1235,14 +1235,14 @@ Package caption Info: subfigure package is loaded.
 Package caption Info: End \AtBeginDocument code.
 \symgns@font=\mathgroup11
 LaTeX Font Info:    Overwriting symbol font `gns@font' in version `bold'
-(Font)                  TS1/txr/m/n --> TS1/txr/b/n on input line 104.
-Package gensymb Info: Math companion symbols declared on input line 104.
-LaTeX Info: Redefining \degree on input line 104.
-LaTeX Info: Redefining \celsius on input line 104.
-Package gensymb Info: Using text companion symbols for \degree, \celsius and \perthousand on input line 104.
-LaTeX Info: Redefining \ohm on input line 104.
-Package gensymb Info: Using \textohm for \ohm on input line 104.
-Package gensymb Info: Using \textmu for \micro on input line 104.
+(Font)                  TS1/txr/m/n --> TS1/txr/b/n on input line 105.
+Package gensymb Info: Math companion symbols declared on input line 105.
+LaTeX Info: Redefining \degree on input line 105.
+LaTeX Info: Redefining \celsius on input line 105.
+Package gensymb Info: Using text companion symbols for \degree, \celsius and \perthousand on input line 105.
+LaTeX Info: Redefining \ohm on input line 105.
+Package gensymb Info: Using \textohm for \ohm on input line 105.
+Package gensymb Info: Using \textmu for \micro on input line 105.
 
 
 Package siunitx Warning: Detected the "physics" package:
@@ -1258,40 +1258,70 @@ Package siunitx Warning: Detected the "physics" package:
 (/usr/share/texmf-dist/tex/latex/translations/translations-basic-dictionary-spanish.trsl
 File: translations-basic-dictionary-spanish.trsl (spanish translation file `translations-basic-dictionary')
 )
-Package translations Info: loading dictionary `translations-basic-dictionary' for `spanish'. on input line 104.
+Package translations Info: loading dictionary `translations-basic-dictionary' for `spanish'. on input line 105.
 \c@lstlisting=\count446
  (/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarypositioning.code.tex
 File: tikzlibrarypositioning.code.tex 2023-01-15 v3.1.10 (3.1.10)
 )
-LaTeX Font Info:    Trying to load font information for U+txsya on input line 113.
+LaTeX Font Info:    Trying to load font information for U+txsya on input line 114.
  (/usr/share/texmf-dist/tex/latex/txfonts/utxsya.fd
 File: utxsya.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Trying to load font information for U+txsyb on input line 113.
+LaTeX Font Info:    Trying to load font information for U+txsyb on input line 114.
  (/usr/share/texmf-dist/tex/latex/txfonts/utxsyb.fd
 File: utxsyb.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Trying to load font information for U+txmia on input line 113.
+LaTeX Font Info:    Trying to load font information for U+txmia on input line 114.
  (/usr/share/texmf-dist/tex/latex/txfonts/utxmia.fd
 File: utxmia.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Trying to load font information for U+txsyc on input line 113.
+LaTeX Font Info:    Trying to load font information for U+txsyc on input line 114.
  (/usr/share/texmf-dist/tex/latex/txfonts/utxsyc.fd
 File: utxsyc.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Trying to load font information for TS1+txr on input line 113.
+LaTeX Font Info:    Trying to load font information for TS1+txr on input line 114.
  (/usr/share/texmf-dist/tex/latex/txfonts/ts1txr.fd
 File: ts1txr.fd 2000/12/15 v3.1
 )
 <escudo .jpg, id=7, 132.15086pt x 162.6075pt>
 File: escudo .jpg Graphic file (type jpg)
 <use escudo .jpg>
-Package pdftex.def Info: escudo .jpg  used on input line 117.
+Package pdftex.def Info: escudo .jpg  used on input line 118.
 (pdftex.def)             Requested size: 34.68507pt x 42.67912pt.
 LaTeX Font Info:    Font shape `OT1/txr/b/n' in size <10.95> not available
-(Font)              Font shape `OT1/txr/bx/n' tried instead on input line 121.
+(Font)              Font shape `OT1/txr/bx/n' tried instead on input line 122.
 LaTeX Font Info:    Font shape `OT1/txr/b/n' in size <12> not available
-(Font)              Font shape `OT1/txr/bx/n' tried instead on input line 121.
+(Font)              Font shape `OT1/txr/bx/n' tried instead on input line 122.
+
+Underfull \hbox (badness 10000) in paragraph at lines 125--133
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 125--133
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 134--137
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 140--153
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 140--153
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 140--153
+
+ []
+
 
 
 [1
@@ -1321,238 +1351,127 @@ Non-PDF special ignored!
 Non-PDF special ignored!
 <special> ps:tx@Dict begin  gsave STV CP T /ps@rot 0 def grestore  end
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf-dist/fonts/enc/dvips/base/8r.enc} <./escudo .jpg>]
-Overfull \hbox (11.30899pt too wide) detected at line 185
-[]
+Underfull \hbox (badness 10000) in paragraph at lines 183--187
+
  []
 
-./guia2.tex:198: Extra }, or forgotten \right.
-<recently read> }
-                 
-l.198 \end{align*}
-                  
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-./guia2.tex:198: Missing \right. inserted.
-<inserted text> 
-                \right .
-l.198 \end{align*}
-                  
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-./guia2.tex:198: Missing } inserted.
-<inserted text> 
-                }
-l.198 \end{align*}
-                  
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-./guia2.tex:198: Missing } inserted.
-<inserted text> 
-                }
-l.198 \end{align*}
-                  
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-./guia2.tex:198: Extra \right.
-<argument> ...{z}{r}(x+r)+z\right )(z+cr) \right ]
-                                                   + \frac {r(x+r)}{[r(x+r)]...
-l.198 \end{align*}
-                  
-I'm ignoring a \right that had no matching \left.
-
-./guia2.tex:198: Missing { inserted.
-<inserted text> 
-                {
-l.198 \end{align*}
-                  
-I've put in what seems to be necessary to fix
-the current column of the current alignment.
-Try to go on, since this might almost work.
-
-
-LaTeX Warning: Command \texttwosuperior invalid in math mode on input line 198.
-
-
-LaTeX Warning: Command \texttwosuperior invalid in math mode on input line 198.
-
-Missing character: There is no ≤ in font txr!
-./guia2.tex:198: Extra }, or forgotten \right.
-<recently read> }
-                 
-l.198 \end{align*}
-                  
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-./guia2.tex:198: Missing \right. inserted.
-<inserted text> 
-                \right .
-l.198 \end{align*}
-                  
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-./guia2.tex:198: Missing } inserted.
-<inserted text> 
-                }
-l.198 \end{align*}
-                  
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-./guia2.tex:198: Missing } inserted.
-<inserted text> 
-                }
-l.198 \end{align*}
-                  
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-./guia2.tex:198: Extra \right.
-<argument> ...{z}{r}(x+r)+z\right )(z+cr) \right ]
-                                                   + \frac {r(x+r)}{[r(x+r)]...
-l.198 \end{align*}
-                  
-I'm ignoring a \right that had no matching \left.
-
-./guia2.tex:198: Missing { inserted.
-<inserted text> 
-                {
-l.198 \end{align*}
-                  
-I've put in what seems to be necessary to fix
-the current column of the current alignment.
-Try to go on, since this might almost work.
-
-
-LaTeX Warning: Command \texttwosuperior invalid in math mode on input line 198.
-
-
-LaTeX Warning: Command \texttwosuperior invalid in math mode on input line 198.
-
-Missing character: There is no ≤ in font txr!
 
 
 [2]
-Underfull \hbox (badness 10000) in paragraph at lines 198--203
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 198--203
-
- []
-
-
 
 [3]
-./guia2.tex:228: Undefined control sequence.
-l.228   \nabla p = \partia
-                          _rp\hat{r} + \partial_zp\hat{z}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
+Underfull \hbox (badness 10000) in paragraph at lines 267--271
 
-
-LaTeX Warning: Command \' invalid in math mode on input line 268.
-
-./guia2.tex:268: Please use \mathaccent for accents in math mode.
-\add@accent ... \let \ignorespaces \relax \accent 
-                                                  #1 #2\egroup \ifmmode \els...
-l.268   z_{m√°
-              x}=\frac{\omega^2}{3g}(a^2+b^2) + \frac{h}{4}
-I'm changing \accent to \mathaccent here; wish me luck.
-(Accents are not the same in formulas as they are in text.)
+ []
 
 
 
 [4]
 
-LaTeX Warning: Command \' invalid in math mode on input line 270.
-
-./guia2.tex:270: Please use \mathaccent for accents in math mode.
-\add@accent ... \let \ignorespaces \relax \accent 
-                                                  #1 #2\egroup \ifmmode \els...
-l.270 Ahora imponemos la condici√≥n que $z_{m√°
-                                               x}\leq h$ tal que
-I'm changing \accent to \mathaccent here; wish me luck.
-(Accents are not the same in formulas as they are in text.)
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 292--295
-
- []
-
-
-
 [5]
+./guia1.tex:350: Extra }, or forgotten \right.
+<template> }
+            $}\ifmeasuring@ \savefieldlength@ \fi \set@field \endtemplate 
+l.350 \end{align*}
+                  
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+./guia1.tex:350: Missing \right. inserted.
+<inserted text> 
+                \right .
+l.350 \end{align*}
+                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./guia1.tex:350: Missing } inserted.
+<inserted text> 
+                }
+l.350 \end{align*}
+                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./guia1.tex:350: Extra }, or forgotten \right.
+<template> }
+            $}\ifmeasuring@ \savefieldlength@ \fi \set@field \endtemplate 
+l.350 \end{align*}
+                  
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+./guia1.tex:350: Missing \right. inserted.
+<inserted text> 
+                \right .
+l.350 \end{align*}
+                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./guia1.tex:350: Missing } inserted.
+<inserted text> 
+                }
+l.350 \end{align*}
+                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
 
 [6]
-Underfull \hbox (badness 10000) in paragraph at lines 346--350
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 351--355
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 351--355
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 359--363
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 378--382
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 378--382
-
- []
-
-
 
 [7]
-runsystem(latexminted cleantemp  --timestamp 20250407020115 6E64082BB8969D0EC00D96E0D8B1A101)...executed safely (allowed).
 
- (./guia2.aux
+[8]
+
+[9]
+
+[10]
+
+[11]
+Overfull \hbox (75.73042pt too wide) detected at line 607
+[]
+ []
+
+
+
+[12]
+Overfull \hbox (8.60463pt too wide) detected at line 677
+[]
+ []
+
+
+
+[13]
+Overfull \hbox (53.03816pt too wide) detected at line 687
+[]
+ []
+
+
+
+[14]
+runsystem(latexminted cleantemp  --timestamp 20250406231524 9AE58BB3969C8434D7241E8863690961)...executed safely (allowed).
+
+ (./guia1.aux
 LaTeX Info: Redefining \. on input line 13.
 LaTeX Info: Redefining \% on input line 13.
 )
@@ -1560,22 +1479,22 @@ LaTeX Info: Redefining \% on input line 13.
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
-Package rerunfilecheck Info: File `guia2.out' has not changed.
+Package rerunfilecheck Info: File `guia1.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 39686 strings out of 475109
- 789209 string characters out of 5765326
- 1527086 words of memory out of 5000000
- 62042 multiletter control sequences out of 15000+600000
+ 39737 strings out of 475109
+ 789768 string characters out of 5765326
+ 1530087 words of memory out of 5000000
+ 62058 multiletter control sequences out of 15000+600000
  580204 words of font info for 87 fonts, out of 8000000 for 9000
  40 hyphenation exceptions out of 8191
- 90i,18n,117p,638b,1081s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texmf-dist/fonts/type1/public/amsfonts/latxfont/line10.pfb></usr/share/texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb></usr/share/texmf-dist/fonts/type1/public/txfonts/rtxr.pfb></usr/share/texmf-dist/fonts/type1/public/txfonts/txex.pfb></usr/share/texmf-dist/fonts/type1/public/txfonts/txsy.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on guia2.pdf (7 pages, 134035 bytes).
+ 90i,11n,117p,1933b,1154s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/share/texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb></usr/share/texmf-dist/fonts/type1/public/txfonts/rtxr.pfb></usr/share/texmf-dist/fonts/type1/public/txfonts/txex.pfb></usr/share/texmf-dist/fonts/type1/public/txfonts/txsy.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on guia1.pdf (14 pages, 153909 bytes).
 PDF statistics:
- 124 PDF objects out of 1000 (max. 8388607)
- 97 compressed objects within 1 object stream
- 39 named destinations out of 1000 (max. 500000)
+ 186 PDF objects out of 1000 (max. 8388607)
+ 153 compressed objects within 2 object streams
+ 74 named destinations out of 1000 (max. 500000)
  18 words of extra memory for PDF output out of 10000 (max. 10000000)
 

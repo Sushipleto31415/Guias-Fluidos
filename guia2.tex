@@ -117,7 +117,7 @@ Facultad de Cs. Físicas y Matemáticas\\
 \includegraphics[height=1.5cm]{escudo .jpg}
 \end{flushright}
  
-\begin{center}\vspace{-1cm}
+\begin{center}\vspace{-1cm} 
 \textbf{\large Mecánica de Fluídos: Guía 1}\\   %TITULO
 Amaro A. Díaz Concha\\                         %NOMBRE
 \end{center}
@@ -125,13 +125,260 @@ Amaro A. Díaz Concha\\                         %NOMBRE
 \textbf{Pregunta 1:} Un cubo de hielo flota en un vaso de agua. Cuando el hielo se derrite, ¿qué nivel de agua tiene? \\
 \textbf{Solución:} \\ 
 Cuando un hielo que flota en un vaso de agua se derrite, el nivel del agua se reduce, ya que el hielo es menos denso que el agua, y por ende ocupa más volumen que la dicha agua, con lo cual, al derretirse, volviéndose agua, ocupará menos volumen que cuando estaba vuelto hielo.
-
+ 
 \textbf{Pregunta 2:} Cierto fluido tiene un campo de velocidades de la forma
 \begin{equation}
-    \vec{u} = \frac{1}{r(x+r)} [(x+ar)\hat{x} + (y+br)\hat{y} + (z+cr)\hat{z}],
+    \vec{u} = \frac{1}{r(x+r)} [(x+ar)\hat{x} + (y+br)\hat{y} + (z+cr)\hat{z}]
 \end{equation}
 donde $r=\sqrt{x^2+y^2+z^2}$. Encuentre las condiciones para las constantes a, b y c de modo que el fluido sea \textbf{incompresible}. \\
 \textbf{Solución:} \\
-Hola
+Recordemos que la ecuación de continuidad en el contexto de mecánica de fluidos es la siguiente
+\begin{equation}
+  \partial_t\rho + \nabla \cdot (\rho \vec{u}) = 0
+\end{equation}
+En lo cual, si un fluido fuera incompresible, entonces su densidad se mantendría constante, con lo cual, si $\rho=C^{te}$ entonces, su derivada parcial con respecto al tiempo sería cero
+\begin{align*}
+  \cancel{\partial_t\rho}^0 + \nabla \cdot (\rho \vec{u})  & = 0 \\
+  \rho \nabla \cdot (\vec{u}) & = \\
+  \nabla \cdot (\vec{u}) & = 
+\end{align*}
+Con lo cual, se concluye que para un fluido incompresible, la divergencia de su campo de velocidades deberá ser cero
+\begin{equation}
+  \nabla \cdot \vec{u} = 0
+\end{equation}
+Ahora bien, si se tiene el siguiente campo de velocidades
+\begin{equation}
+    \vec{u} = \frac{1}{r(x+r)} [(x+ar)\hat{x} + (y+br)\hat{y} + (z+cr)\hat{z}],
+\end{equation}
+Para calcular la divergencia del campo vectorial $\vec{u}$ usaremos la siguiente identidad vectorial
+\begin{equation}
+  \nabla \cdot (f\vec{v}) = \nabla f \cdot \vec{v} + f(\nabla \cdot \vec{v})
+\end{equation}
+En lo cual, el campo escalar $f$ corresponde al factor
+\begin{equation}
+  f=\frac{1}{r(x+r)}
+\end{equation}
+y el campo vectorial corresponde al otro factor dado por
+\begin{equation}
+  \vec{v}=(x+ar)\hat{x} + (y+br)\hat{y} + (z+cr)\hat{z}
+\end{equation}
+Con lo cual, solo nos queda calcular el gradiente del factor $f$ y la divergencia de $\vec{v}$.
+\begin{align*}
+  \nabla f & = \partial_x\left(\frac{1}{r(x+r)}\right) \hat{x} + \partial_y\left(\frac{1}{r(x+r)}\right)\hat{y} + \partial_z\left(\frac{1}{r(x+r)}\right)\hat{z} \\
+  & = \frac{-1}{[r(x+r)]^2}\partial_x[(r(x+r))]\hat{x} + \frac{-1}{[r(x+r)]^2}\partial_y[r(x+r)]
+\hat{y} + \frac{-1}{[r(x+r)]^2}\partial_z[r(r+x)]\hat{z} \\
+  & = \frac{-1}{[r(x+r)]^2}\left\{\partial_x[r(x+r)]\hat{x}+\partial_y[r(x+r)]\hat{y} + \partial_y[r(x+r)]\hat{z}\right\} \\
+  & = \frac{-1}{[r(x+r)]^2} \left\{ (x+r)\left(\frac{x}{r} + 1 \right)\hat{x} + \left(\frac{y}{r}(x+r)+y\right)\hat{y} + \left(\frac{z}{r}(x+r) + z\right)\hat{z} \right\}
+\end{align*}
+Ahora nos queda calcular la divergencia del campo vectorial $\vec{v}$, como sigue
+\begin{align*}
+  \nabla \cdot \vec{v} & = 3 +\frac{ax}{r} + \frac{by}{r} + \frac{cz}{r} \\
+  & = 3 + \frac{ax+by+cz}{r}
+\end{align*}
+Con lo cual, reemplazamos en la identidad
+\begin{align*}
+  \nabla f \cdot v + f(\nabla \cdot \vec{v}) & = \nabla f\cdot \vec{v} + \frac{1}{r(r+x)}\left( 3 + \frac{ax+by+cz}{r} \right)  \\
+  & =\left[ \frac{-1}{[r(x+r)]^2} \left\{  (x+r)\left(\frac{x}{r}+1\right) \hat{x} + \left(\frac{y}{r}(x+r)+y\right)\hat{y} + \left(\frac{z}{r}(x+r) + z\right)\hat{z} \right\} \right] \cdot \dots \\
+  & \left[ (x+ar)\hat{x} + (y+br)\hat{y} + (z+cr)\hat{z} \right] + \frac{1}{r(r+x)}\left( 3 + \frac{ax+by+cz}{r} \right) \\
+  & = \frac{-1}{[r(x+r)]^2} \left[ (x+r)\left(\frac{x}{r}+1\right)(x+ar) + \left(\frac{y}{r}(x+r)+y\right)(y+br) + \left(\frac{z}{r}(x+r)+z\right)(z+cr) \right] + \dots \\
+  & \frac{1}{r(x+r)}\left(3+\frac{ax+by+cz}{r}\right) \\
+\end{align*}
+Ahora que se tiene una expresión para la divergencia del campo de velocidades, la igualaremos a cero, tal que cumpla con la propiedad de fluido incompresible
+\begin{align*}
+  \nabla \cdot \vec{u} & = 0 \\
+  \frac{-1}{[r(x+r)]^2} \left[ (x+r)\left(\frac{x}{r}+1\right)(x+ar) + \left(\frac{y}{r}(x+r)+y\right)(y+br)\dots & \\ + \left(\frac{z}{r}(x+r)+z\right)(z+cr) \right] +
+   \frac{r(x+r)}{[r(x+r)]^2}\left(3+\frac{ar+by+cz}{r}\right) = &\\
+  (x+r)\left(\frac{x}{r}+1\right)(x+ar) + \left(\frac{y}{r}(x+r)+y\right)(y+br)\dots & \\ + \left(\frac{z}{r}(x+r)+z\right)(z+cr) - r(x+r)\left( \frac{3r+ax+by+cz}{r} \right) = \\
+  \frac{(x+r)^2(x+ar)}{r}+\frac{[y(x+r)+yr](y+br)}{r} + \frac{[z(x+r)+zr](z+cr)}{r} + \dots & \\
+  -r(x+r)\left(\frac{3r+ax+by+cz}{r}\right) = & \\
+  (x+r)^2(x+ar) + (yx+2yr)(y+br) + (zx+2zr)(z+cr) + r(x+r)(3r+ax+by+cz) = & \\ 
+  (x+r)[(x+a)(x+ar)- r(3r+ax+by+cz)] + (x+2r)[y(y+br)+z(z+cr)] = & \\
+  (x+r)[x^2+xar+ax++a²r - 3r^2-xar-byr+czr] +(x+2r)[y^2+ybr+z^2+crz] = 0 & \\
+  (x+r)[x^2+ax+a^2r] 
+\end{align*}
+\textbf{Pregunta 3:} \\
+Calcule las componentes del tensor de tensiones en coordenadas cartesianas para dos fluidos distintos cuyos campos de velocidades son $\vec{u}=\omega\vec{z}$ y $\vec{u}=\lambda\vec{r}$- Interprete los resultados considerando las componentes de este tensor. ¿Son estos campos compatibles con la condición de incompresibilidad?\\
+\textbf{Solución:} \\
+\\
 
+\textbf{Pregunta 4:} Un tanque rectangular de altura $h$, largo a y ancho b, se maitnene con la tapa superior abierta. Este tanque se llena con agua un cuarto de su volumen. Luego, empieza a rotar hasta alcanzar un estado estacionario, con una velocidad angular $\omega$ con respecto a un eje vertical que coincide con una de las aristas del cubo. Demuestre para que el agua no rebalse, entonces
+\begin{equation}
+  \omega \leq \frac{3}{2}\sqrt{\frac{cg}{a^2+b^2}}
+\end{equation} 
+donde g es la aceleración de gravedad.\\
+\textbf{Solución:} \\
+Lo primero que podemos notar, es que nos dicen que el tanque está un cuarto de lleno, osea, que su volumen inicial es de 
+\begin{equation}
+  V_0=\frac{1}{4}abh
+\end{equation}
+Ahora, un cubo que rota con una velocidad angular $\omega$ sufrirá el efecto de las fuerzas centrífuga, la cual empuja el contenido hacia fuera en dirección radial y la fuerza gravitatoria que apuntará hacia el eje z en negativo, tal que, según la ecuación de Navier-Stokes:
+\begin{equation}
+  \rho\left(\partial_tu + (u\cdot\nabla)u\right) =-\nabla p + \mu\nabla^2u + \rho(\omega^2r\hat{r}-g\hat{z})
+\end{equation}
+Pero en este caso nos dicen que el fluido se encuentra en estado estacionario, con lo cual $\vec{u}=0$, así, la ecuación se reduce a lo siguiente
+\begin{equation}
+  \nabla p = \rho(\omega^2r\hat{r}-g\hat{z})
+\end{equation}
+Con lo cual, integraremos con respecto al gradiente de la presión, lo cual, a modo de convenencia por la dirección de las fuerzas externas, haremos en coordenadas cilíndricas, recordemos que el gradiente en cilíndricas es el siguiente
+\begin{equation}
+  \nabla \phi = \partial_r\phi\hat{r} +\frac{1}{r}\partial_\theta \phi\hat{\theta} + \partial_z\phi\hat{z} 
+\end{equation}
+Pero en este caso, como no hay fuerzas externas en la dirección azimutal, entonces solo necesitaremos el gradiente en dirección r y z
+\begin{equation}
+  \nabla p = \partia_rp\hat{r} + \partial_zp\hat{z}
+\end{equation}
+Con lo cual tenemos el siguiente sistema
+\begin{equation}
+  \partial_rp = \rho\omega^2r\quad , \quad \partial_zp=-\rho g
+\end{equation}
+Integrando en el término de r obtenemos
+\begin{equation*}
+  p=\frac{1}{2}\rho\omega^2r^2 + f(z)
+\end{equation*}
+Ahora derivamos este término parcialmente con respecto a z e igualamos
+\begin{equation*}
+  \partial_zp=f'(z) = -\rho g
+\end{equation*}
+integrando esto último obtenemos que p es igual a 
+\begin{equation}
+  p(r,z)=\frac{1}{2}\rho\omega^2r^2 - \rho g z + C 
+\end{equation}
+Ahora, como el líquido está estado estacionario, entonces la presión será constante, así, podemos depejar z, tal que 
+\begin{equation}
+  z(r)=\frac{\omega^2}{2g}r^2 + \frac{C-p}{\rho g}
+\end{equation}
+Al último término constante le llamaremos la altura inicial $z_0$, con lo cual, la altura está dada por el siguiente paraboloide
+\begin{equation}
+  z(r)=\frac{\omega^2}{2g}r^2 + z_0
+\end{equation}
+Ahora, aplicamos esto a un tanque rectangular de lados a y b, con lo que el radio del paraboloide será $r=\sqrt{a^2+b^2}$. Ahora, para dicho radio, que será cuando el agua llegue al borde del cubo, tendremos que aplicar la conservación de masas, o sea que la nueva función de altura debe conservar el volumen de agua inicial que se tiene, tal que 
+\begin{equation}
+  \int_Az(r)dA = \frac{1}{4}abh
+\end{equation}
+Con lo cual, integramos
+\begin{align*}
+  \int_0^a\int_0^b\left[\frac{\omega^2}{2g}(x^2+y^2) + z_0 \right]dxdy & = \frac{\omega^2}{6g}(a^3b+ab^3) +z_0ab
+\end{align*}
+Resolviendo para $z_0$ podemos despejar la altura inicial en términos de a y b tal que, integrando
+\begin{equation}
+  z_0=\frac{h}{4}-\frac{\omega^2}{6g}(a^2+b^2)
+\end{equation}
+Reemplazamos la altura inicial en la expresión de la altura en función del radio, pero esta vez evaluada para la cual la altura es máxima, o sea, para el radio iguala $r=\sqrt{a^2+b^2}$
+\begin{equation*}
+  z_{máx}=\frac{\omega^2}{3g}(a^2+b^2) + \frac{h}{4}
+\end{equation*}
+Ahora imponemos la condición que $z_{máx}\leq h$ tal que
+\begin{align*}
+  \frac{\omega^2}{3g}(a^2+b^2) +\frac{h}{4} & \leq h \\
+  \frac{\omega^2}{3g}(a^2+b^2) & \leq \frac{3h}{4} \\
+  \omega^2 & \leq \frac{9}{4}\frac{hg}{(a^2+b^2)} \\
+  \omega & \leq \frac{3}{2}\sqrt{\frac{hg}{a^2+b^2}}
+\end{align*}
+Con lo cual se concluye que la condición que deberá seguir la velocidad angular para que el bote no derrame el agua es la siguiente
+\begin{equation}
+  \omega \leq \frac{3}{2}\sqrt{\frac{hg}{a^2+b^2}}
+\end{equation}
+\\
+\textbf{Pregunta 5:} Un fluido en estado estacionario fluye alrededor de una esfera fija de radio a ubicada en el origen, de modo que el campo de velocidades del fluido es
+\begin{equation}
+  \vec{u} = -u_0\left(1+\frac{a^3}{r^5}\right)\hat{x} + 3u_0\frac{a^3}{r^5}x\vec{r}
+\end{equation}
+donde $u_0$ es la rapidez del fluido muy lejos de la esfera. \\
+Encuentre la aceleración del fluido en un punto $\vec{r}=b\hat{x}$ , con $b\geq a$. Encuentre el valor de b para el cual la aceleración es máxima.\\
+\textbf{Solución:} \\
+Primero, para calcular la aceleración haremos uso de la derivada material, y como en este caso la velocidad no depende explícitamente del tiempo, entonces la derivada material corresponde a 
+\begin{equation}
+  \frac{D\vec{u}}{Dt}=(\vec{u}\cdot\nabla)\vec{u} = \vec{a}
+\end{equation}
+Con lo cual, queda calcular el producto punto entre el campo de velocidades $\vec{u}$ 
+\\
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\textbf{Pregunta 6:} A partir de la ecuación de movimiento de un fluido incompresible en ausencia de fuerzas de volumen, encuentre una expresión para la presión estática p, asumiento que el flujo es estacionario y con velocidad $u=\vec{\omega}\times\vec{r}$, con $\vec{\omega}$ un vector constante. \\
+\textbf{Solución:} \\
+Como condiciones tenemos que, el flujo será estacionario $\partial_t\vec{u}=\vec{0}$ e incompresible $\nabla \cdot \vec{u}=0$, con $\vec{f}=\vec{0}$, con lo cual, la ecuación de Navier-Stokes se reduce a lo siguiente
+\begin{equation}
+  \rho(\vec{u}\cdot \nabla)\vec{u} = -\nabla p +\mu \nabla^2\vec{u} 
+\end{equation}
+Ahora, el enunciado nos dice que el campo de las velocidades está dado por $\vec{u}=\vec{\omega}\times\vec{r}$ con $\vec{\omega}$ un vector constante, entonces
+\begin{equation}
+  \nabla^2\vec{u}=0
+\end{equation}
+ya que el vector posición será sero con respecto a derivadas de segundo orden, con lo cual, la ecuación de Navier-Stokes se reducirá aún más, como sigue
+\begin{equation}
+  \rho(\vec{u}\cdot\nabla)\vec{u} = -\nabla p
+\end{equation}
+Como $\vec{\omega}$ es un vector constante, siempre podemos adecuar nuestro eje coordenado tal que esté alineado con este, en este caso, alinearemos el eje z con la dirección de $\vec{\omega}$ tal que $\vec{\omega}=\omega\hat{z}$. Así, con $\vec{r}$ el vector posición en coordenadas cartesianas 
+\begin{equation}
+  \vec{\omega}\times\vec{r}= -\omega y\hat{x}+\omega x \hat{y}
+\end{equation}
+Así, podemos calcular el término conectivo ($(\vec{u}\cdot\nabla)\vec{u}$) de la ecuación de Navier-Stokes, tal que
+\begin{align*}
+  (\vec{u}\cdot\nabla)\vec{u}  &= \left(-y\omega\partial_x + x\omega\partial_y \right)(-y\omega\hat{x}+x\omega\hat{y}) \\
+  & = -x\omega^2\hat{x}-y\omega^2\hat{y} \\
+  & = -\omega^2\vec{r}
+\end{align*}
+en donde $\vec{r}=x\hat{x}+y\hat{y}$ es la componente radial en coordenadas cilíndricas. Ahora reemplamos lo obtenido en la ecuación de Navier-Stokes,
+\begin{align*}
+  \rho\omega^r\hat{r}=\nabla p
+\end{align*}
+ahora solo nos queda integrar el gradiente de $p$, lo cual haremos en coordenadas cilíndricas
+\begin{align*}
+  \partial_r p &  = \rho\omega^2r \\
+  & = \frac{\rho \omega^2}{2}r^2 + p_0
+\end{align*}
+Con lo cual hemos encontrado una expresión para la presión estática en un fluido en rotación
+\begin{equation}
+  p(r) = \left(\frac{\rho \omega^2}{2}r^2 + p_0\right)\hat{r}
+\end{equation}
+\\
+\textbf{Pregunta 7:} La densidad de un flujo estacionario está dado por $\rho = kx_1x_2$, donde $k$ es una constante. Determine la velocidad para la cual el flujo es incompresible, y encuentre una ecuación para las líneas de flujo. \\
+\textbf{Solución:} \\
+Tenemos como condiciones que el flujo debe ser incompresible y estacionario, con lo cual, primero, la derivada material de la densidad deberá ser cero y además la derivada parcial de la densidad con respecto al tiempo deberá ser cero, lo que nos deja como condición  que
+\begin{equation}
+  \frac{D\rho}{Dt} = \vec{u}\cdot\nabla\rho = 0
+\end{equation}
+Con lo cual solo nos queda calcular el gradiente y posterior producto punto
+\begin{align*}
+  (u_1\hat{x_1}+u_2\hat{x_2}+u_3\hat{x_3})\cdot \left(kx_2\hat{x_1}+kx_1\hat{x_2}\right) & = 0 \\
+  ku_1x_2 + ku_2x_1 & =  \\
+  u_1 & = -\frac{x_1}{x_2}u_2
+\end{align*}
+La cual cumple como condición para el campo de velocidades. 
+\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\textbf{Pregunta 8:} Derive y escriba la ecuación de conservación de masas en coordenadas cartesianas cilíndricas y esféricas. \\
+\textbf{Solución:} \\
+\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\textbf{Pregunta 9:} Demuestre que un fluido incompresible satiface la siguiente ecuación
+\begin{equation}
+  \partial_t \rho + \vec{u} \cdot \nabla \rho = 0
+\end{equation}
+donde $\vec{u}$ es la velocidad de flujo. Escriba la ecuación en coordenadas cartesianas, cilíndricas y esféricas.  \\
+\textbf{Solución:}
+\\
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\textbf{Pregunta 10:} Demuestre que para un flujo bidimensional $\vec{u}=u_x\hat{x}+u_y\hat{y}$ incompresible, necesariamente y es suficiente que exista una finción $\psi=\psi(x,y)$ tal que
+\begin{equation}
+  u_x=\partial_y\psi \quad, \quad u_y=\partial_x=-\partial_x\psi
+\end{equation}
+La función $\psi$ se conoce como función de flujo. Para poder probar suficiencia, use el teorema de Stokes. \\
+\textbf{Solución:}
+\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\textbf{Pregunta 11:} Demuestre que para un flujo bidimensional $\vec{u}=u_x\hat{x} + u_y\hat{y}
+$ compresible pero estacionario, necesariamente y es suficiente que exista una función $\psi=\psi(x,y)$ tal que
+\begin{equation}
+  u_x=\frac{\rho_0}{\rho}\partial_y\psi\quad , \quad u_y=-\frac{\rho_0}{\rho}\partial_x\psi
+\end{equation}
+\textbf{Solución:} \\
+\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\textbf{Pregunta 12:}
 \end{document}

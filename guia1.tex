@@ -318,6 +318,52 @@ De lo cual se concluye que:
 \begin{equation}
     \nabla \cdot (\vec{A}\times \vec{B}) = (\nabla \times \vec{A})\cdot \vec{B}  - \vec{A} \cdot (\nabla \times \vec{B}) 
 \end{equation}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\textbf{Pregunta 22:} Una aproximación a primer orden para materiales sólidos elásticos que relaciona el tensor de tensiones $\check{\sigma}$ con el tensor de deformaciones $\check{\eta}$ es:
+\begin{equation}
+  \sigma_{ij}= \frac{E}{1+\nu} \left[\eta_{ij} + \frac{\nu}{1-2\nu}\eta_{kk}\delta_{ij}\right]
+\end{equation}
+donde $E$ es el módulo de Young, $\nu$ es el coeficiente de Poisson y $\delta_{ij}$ es la delta de Kronecker. Invierta la ecuación para encontrar $\eta_{ij}$ como función de $\sigma$. Note que $\eta_{kk}$ corresponde a la traza de $\check{\eta}$.\\
+\textbf{Solución:} \\
+Lo primero que se hará para encontrar $\check{\eta}$ en función de $\check{\sigma}$ será pasar el término constante al otro lado de la ecuación, tal que
+\begin{equation*}
+  \frac{1+\nu}{E}\sigma_{ij} = \eta_{ij} + \frac{\nu}{1-2\nu}\eta_{kk}\delta_{ij}
+\end{equation*}
+Ahora es necesario encontrar la traza de $\check{\sigma}$ en función de la traza de $\check{\eta}$ con lo cual, contraemos los índices de la siguiente forma
+\begin{equation*}
+  \frac{1+\nu}{E}\sigma_{ij}\delta_{ik}\delta{jk} = \left[\eta_{ij} +\frac{\nu}{1-2\nu}\eta_{kk}\delta_{ij}\right]\delta_{ik}\delta_{jk}
+\end{equation*}
+Con lo cual, notemos que el término que ya existe de $\eta_{kk}$ será invariante bajo contracciones de índices, con lo cual
+\begin{align*}
+  \frac{1+\nu}{E}\sigma_{kk}  & = \eta_{kk}\left[1+\frac{3\nu}{1-2\nu}\right] \\
+  & = \eta_{kk}\left[ \frac{1+\nu}{1-2\nu} \right] \\
+  \frac{1-2\nu}{E}\sigma_{kk} & = \eta_{kk}
+\end{align*}
+Ahora reemplazamos esto en la expresión original para encontrar $\check{\eta}$ en función de $\check{\sigma}$ y de su traza $\sigma_{kk}$. Tal que
+\begin{align*}
+  \frac{1+\nu}{E}\sigma_{ij} & =  \eta_{ij} + \frac{\nu}{1-2\nu}\left(\frac{1-2\nu}{E}\sigma_{kk}\delta_{ij}\right) \\
+  & = \eta_{ij} + \frac{\nu}{E}\sigma_{kk}\delta_{ij} \\
+  \frac{1+\nu}{E}\sigma_{ij} -\frac{\nu}{E} \sigma_{kk}\delta_{ij} & = \eta_{ij} \\
+  \frac{1}{E}\left[(1+\nu)\sigma_{ij}-\nu\sigma_{kk}\delta_{ij}] & = 
+\end{align*}
+Con lo cual se concluye que
+\begin{equation}
+  \eta_{ij}=\frac{1}{E}\left[(1+\nu)\sigma_{ij}-\nu\sigma_{kk}\delta{ij}\right]
+\end{equation}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\textbf{Pregunta 24:} Demuestre, usando notación de índices, que la operación $(\vec{u}\cdot\nabla)\vec{\omega}$ es asociativa, es decir, es equivalente a $\vec{u}\cdot\nabla\vec{\omega}$. \\
+\textbf{Solución:} \\
+Primero escribiremos el lado izquierdo en notación de índices
+\begin{align*}
+  (\vec{u}\cdot\nabla)\vec{\omega}  & = 0 
+\end{align*}
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \textbf{Pregunta 26:} Escriba las siguientes expresiones en coordenadas cartesianas, cilíndricas y esféricas.¿Cuál es el rango del tensor resultante de cada operación?
 \begin{enumerate}
     \item El gradiente $\nabla p$ con $p$ un campo escalar.
